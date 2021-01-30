@@ -1,7 +1,4 @@
 
-
-
-
 /*
 ===
 CANVAS BLOB
@@ -298,6 +295,11 @@ init = function() {
 init();
 /*canvas.style.zIndex = 99;*/
 
+/*
+====================================
+RESIZE CANVAS IN VW
+====================================
+*/
 
 function setUpCanvas() {
   canvas = document.getElementsByClassName("canvas_hangman")[0];
@@ -305,7 +307,7 @@ function setUpCanvas() {
   ctx.translate(0.5, 0.5);
 
   // Set display size (vw/vh).
-  var sizeWidth = 80 * window.innerWidth / 100,
+  var sizeWidth = 100 * window.innerWidth / 100,
     sizeHeight = 100 * window.innerHeight / 100 || 766;
 
   //Setting the canvas site and width to be responsive 
@@ -318,9 +320,11 @@ function setUpCanvas() {
 window.onload = setUpCanvas();
 
 
-/*==================================
+/*
+====================================
 DATE/TIME
-====================================*/
+====================================
+*/
 
 tday=new Array("S","M","T","W","T","F","S");
 tmonth=new Array("01","02","03","04","05","06","07","08","09","10","11","12");
