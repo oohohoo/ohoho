@@ -293,3 +293,31 @@ init = function() {
 
 init();
 /*canvas.style.zIndex = 99;*/
+
+
+/*==================================
+DATE/TIME
+====================================*/
+
+tday=new Array("S","M","T","W","T","F","S");
+tmonth=new Array("01","02","03","04","05","06","07","08","09","10","11","12");
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin
+if(nsec<=9) nsec="0"+nsec;
+
+
+document.getElementById('clockbox').innerHTML=""+tday[nday]+""+ndate+""+tmonth[nmonth]+""+nyear+" • "+nhour+""+nmin+""+nsec+"";
+
+/*  document.getElementById('clockbox').innerHTML=""+nday+""+nmonth+""+nyear+" • "+nhour+""+nmin+""+nsec+""; */
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+
+
