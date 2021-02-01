@@ -230,32 +230,20 @@ init = function() {
   document.body.appendChild(canvas);
 
 
-// old resize
-/*
+
+
   let resize = function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
   window.addEventListener('resize', resize);
   resize();
-  */
+  
 
 
   //
 
- //d const canvas = document.getElementById('canvas');
-
-canvas.width  = window.innerWidth;
-canvas.height = window.innerHeight;
-
-function windowResize() {
-  canvas.width  = window.innerWidth;
-  canvas.height = window.innerHeight;
-};
-
-window.addEventListener('resize', windowResize);
-console.log("CANVAS RESIZED");
-
+  
 
 
 
