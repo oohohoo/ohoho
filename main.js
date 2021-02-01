@@ -245,8 +245,8 @@ init = function() {
 
  //d const canvas = document.getElementById('canvas');
 
-canvas.width  = window.innerWidth;
-canvas.height = window.innerHeight;
+//canvas.width  = window.innerWidth;
+//canvas.height = window.innerHeight;
 
 function windowResize() {
   canvas.width  = window.innerWidth;
