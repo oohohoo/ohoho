@@ -229,13 +229,40 @@ init = function() {
 
   document.body.appendChild(canvas);
 
+
+// old resize
+/*
   let resize = function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
   window.addEventListener('resize', resize);
   resize();
-  
+  */
+
+
+  //
+
+  const canvas = document.getElementById('canvas');
+
+canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function windowResize() {
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+};
+
+window.addEventListener('resize', windowResize);
+console.log("CANVAS RESIZED");
+
+
+
+
+
+
+
+
   let oldMousePoint = { x: 0, y: 0};
   let hover = false;
   let mouseMove = function(e) {
@@ -296,18 +323,6 @@ init();
 /*canvas.style.zIndex = 99;*/
 
 
-const canvas = document.getElementById('canvas');
-
-canvas.width  = window.innerWidth;
-canvas.height = window.innerHeight;
-
-function windowResize() {
-  canvas.width  = window.innerWidth;
-  canvas.height = window.innerHeight;
-};
-
-window.addEventListener('resize', windowResize);
-console.log("CANVAS RESIZED");
 
 /*
 ====================================
