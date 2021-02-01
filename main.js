@@ -375,7 +375,7 @@ let tl = gsap.timeline({ease: "power2.inOut"});
 
   // OPEN MENU FROM CLICK
   const openmenu = document.getElementById('openmenu');
-  const closemenu = document.getElementById('closemenu');
+  //const closemenu = document.getElementById('closemenu');
 
   
   
@@ -386,13 +386,13 @@ let tl = gsap.timeline({ease: "power2.inOut"});
   animation
   
  .to("canvas", {duration:2, scale:6})
- .to("#openmenu", {autoAlpha:0}, "<0.1");
+ .to("#openmenu", {rotate:360, autoAlpha:0}, "<0.1");
  
   // CLOSE MENU
   const aniout = gsap.timeline({defaults:{autoAlpha:0}})
   //aniout.paused( true ); 
   aniout
-  .from(".open", {autoAlpha:0, rotate:360, scale: 0.1})
+  //.from(".open", {autoAlpha:0, rotate:360, scale: 0.1})
 
   
   
@@ -400,7 +400,7 @@ let tl = gsap.timeline({ease: "power2.inOut"});
   
   // EVENT LISTENERS
   openmenu.addEventListener("click", function(){ animation.restart(), animation.play(); });
-  closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
+  //closemenu.addEventListener("click", function(){aniout.restart(), aniout.play(); });
   
   
   
