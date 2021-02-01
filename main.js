@@ -296,17 +296,18 @@ init();
 /*canvas.style.zIndex = 99;*/
 
 
+const canvas = document.getElementById('canvas');
 
+canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
 
+function windowResize() {
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+};
 
-
-
-// screen width and height
-scr = {w:document.documentElement.clientWidth,h:document.documentElement.clientHeight}
-canvas.width = scr.w
-canvas.height = scr.h
-
-
+window.addEventListener('resize', windowResize);
+console.log("CANVAS RESIZED");
 
 /*
 ====================================
