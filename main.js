@@ -243,7 +243,7 @@ init = function() {
 
   //
 
-  const canvas = document.getElementById('canvas');
+ //d const canvas = document.getElementById('canvas');
 
 canvas.width  = window.innerWidth;
 canvas.height = window.innerHeight;
