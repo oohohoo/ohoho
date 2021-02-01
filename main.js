@@ -229,9 +229,6 @@ init = function() {
 
   document.body.appendChild(canvas);
 
-
-/*
-
   let resize = function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -239,21 +236,9 @@ init = function() {
   window.addEventListener('resize', resize);
   resize();
   
-*/
+  console.log("HRESIZEDDD");
 
-  //
-
-  $( window ).resize(function() {
-    $("#canvas").width($( window ).width())
-    console.log("RESIZEDDD");
-});
-
-
-
-
-
-
-
+  
   let oldMousePoint = { x: 0, y: 0};
   let hover = false;
   let mouseMove = function(e) {
