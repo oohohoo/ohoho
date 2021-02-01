@@ -5,6 +5,7 @@ CANVAS BLOB
 ===
 */
 
+/*
 let canvas, ctx;
 let render, init;
 let blob;
@@ -78,6 +79,9 @@ class Blob {
       ctx.fillRect(center.x + Math.cos(angle) * this.radius, center.y + Math.sin(angle) * this.radius, 5, 5);
     }
 */
+
+
+/*
     requestAnimationFrame(this.render.bind(this));
   }
   
@@ -300,7 +304,7 @@ init();
 RESIZE CANVAS IN VW
 ====================================
 */
-
+/*
 function setUpCanvas() {
   canvas = document.getElementsByClassName("canvas_hangman")[0];
   ctx = canvas.getContext('2d');
