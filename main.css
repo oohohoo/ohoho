@@ -27,3 +27,14 @@ canvas {
     position: relative !important;
     right: 1000px !important;
 }
+
+
+/* menu */
+
+.open {
+ visibility: hidden;
+}
+
+.close {
+ visibility: hidden;
+}
