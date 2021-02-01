@@ -1,5 +1,21 @@
 
-
+   //loco scroll
+   
+   locoScroll = new LocomotiveScroll({
+    el: document.querySelector(".smooth-scroll"),
+    smooth: true,
+    getDirection: true,
+    scrollFromAnywhere: true,
+    touchMultiplier: 4,
+   // scrollbarContainer: document.querySelector('#primary'),
+    smartphone: {
+          smooth: true,
+      },
+      tablet: {
+          smooth: true,
+      
+      }
+  });
 /*
 ===
 CANVAS BLOB
