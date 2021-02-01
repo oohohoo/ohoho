@@ -236,9 +236,6 @@ init = function() {
   window.addEventListener('resize', resize);
   resize();
   
-  console.log("HRESIZEDDD");
-
-  
   let oldMousePoint = { x: 0, y: 0};
   let hover = false;
   let mouseMove = function(e) {
@@ -300,12 +297,23 @@ init();
 
 
 
+
+
+
+
+// screen width and height
+scr = {w:document.documentElement.clientWidth,h:document.documentElement.clientHeight}
+canvas.width = scr.w
+canvas.height = scr.h
+
+
+
 /*
 ====================================
 RESIZE CANVAS IN VW
 ====================================
 */
-/*
+
 function setUpCanvas() {
   canvas = document.getElementsByClassName("canvas_hangman")[0];
   ctx = canvas.getContext('2d');
@@ -324,7 +332,7 @@ function setUpCanvas() {
 
 window.onload = setUpCanvas();
 
-*/
+console.log("HRESIZEDDD");
 /*
 ====================================
 DATE/TIME
