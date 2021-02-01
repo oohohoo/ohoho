@@ -390,7 +390,8 @@ tl.to(".image", 3, {scale:0.8, delay:-1});
   animation.paused( true ); 
   animation
   
- .to("canvas", {duration:2, scale:6});
+ .to("canvas", {duration:2, scale:6})
+ .to(".openmenu", {autoAlpha:0});
  
   // CLOSE MENU
   const aniout = gsap.timeline({defaults:{autoAlpha:0}})
