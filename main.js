@@ -295,12 +295,25 @@ init = function() {
 init();
 /*canvas.style.zIndex = 99;*/
 
+
+
+
+
+
+
+// screen width and height
+scr = {w:document.documentElement.clientWidth,h:document.documentElement.clientHeight}
+canvas.width = scr.w
+canvas.height = scr.h
+
+
+
 /*
 ====================================
 RESIZE CANVAS IN VW
 ====================================
 */
-
+/*
 function setUpCanvas() {
   canvas = document.getElementsByClassName("canvas_hangman")[0];
   ctx = canvas.getContext('2d');
@@ -319,7 +332,7 @@ function setUpCanvas() {
 
 window.onload = setUpCanvas();
 
-
+*/
 /*
 ====================================
 DATE/TIME
