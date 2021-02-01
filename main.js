@@ -245,6 +245,7 @@ init = function() {
 
   $( window ).resize(function() {
     $("#canvas").width($( window ).width())
+    console.log("RESIZEDDD");
 });
 
 
