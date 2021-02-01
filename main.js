@@ -230,7 +230,7 @@ init = function() {
   document.body.appendChild(canvas);
 
 
-
+/*
 
   let resize = function() {
     canvas.width = window.innerWidth;
@@ -239,11 +239,13 @@ init = function() {
   window.addEventListener('resize', resize);
   resize();
   
-
+*/
 
   //
 
-  
+  $( window ).resize(function() {
+    $("#canvas").width($( window ).width())
+});
 
 
 
