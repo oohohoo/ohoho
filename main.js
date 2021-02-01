@@ -369,12 +369,7 @@ setInterval(GetClock,1000);
 
 let tl = gsap.timeline({ease: "power2.inOut"});
 
-tl.from("h1", 1, {y:100, delay: 1});
-tl.to(".intro-block", 1, {yPercent:-100, delay: 1});
-tl.to(".intro-container", 1, {yPercent:100, delay: -1});
-tl.to(".image", 2, {scale: 1.1, y:-50, delay:-1});
-tl.from("canvas", 2, {scale:6});
-tl.to(".image", 3, {scale:0.8, delay:-1});
+
 
 //document.addEventListener ('DOMContentLoaded', ()=> {
 
