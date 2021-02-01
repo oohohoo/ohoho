@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.6.0/dist/gsap.min.js"></script>
+
 
 /*
 ===
@@ -391,33 +391,13 @@ tl.to(".image", 3, {scale:0.8, delay:-1});
   animation
   
  .to("canvas", {duration:2, scale:6});
-  //.to(".open", {autoAlpha:0, rotate:360, scale: 0.1})
-  /*.from(".close", {autoAlpha:0, rotate:360, scale: 0.1}, "<")
-  .fromTo(".left-white", {clipPath:"polygon(0 0, 0 0, 0 100%, 0% 100%)"}, {clipPath:"polygon(0 0, 60% 0, 10% 100%, 0% 100%)"}, "<")
-  .fromTo(".left-white", {clipPath:"polygon(0 0, 60% 0, 10% 100%, 0% 100%)"}, {clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}, "<0.3")
-  .from(".wback", {autoAlpha:0, opacity:0}, "<")
-  .from(".bgimage", {autoAlpha:0, scale:1.3, opacity:0, duration:1, ease: "power1.out"}, "<")
-  .from(".main-link", {x:-40, stagger:0.1, opacity:0, duration:0.5, ease: "power1.out"}, "<0.1")
-  .from(".small-link", {x:-40, stagger:0.1, opacity:0, duration:0.5, ease: "power1.out"}, "<")
-  .from(".left-language", {opacity:0, stagger:0.1, duration:1}, "<")
-  .from(".tickerwrapper", {autoAlpha:0, x: 700, y:500, opacity:0, duration:1, ease: "power1.out"}, "<")
-  */
+ 
   // CLOSE MENU
   const aniout = gsap.timeline({defaults:{autoAlpha:0}})
   //aniout.paused( true ); 
   aniout
   .from(".open", {autoAlpha:0, rotate:360, scale: 0.1})
-  /*.to(".close", {autoAlpha:1, rotate:360, scale: 0.1}, "<")
-  .fromTo(".left-white", {autoAlpha:1, clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}, {duration: 0.5, autoAlpha:1, clipPath:"polygon(0 0, 10% 0, 60% 100%, 0% 100%)"}, "<")
-  .fromTo(".left-white", {autoAlpha:1, clipPath:"polygon(0 0, 10% 0, 60% 100%, 0% 100%)"}, {duration: 0.3, autoAlpha:1, clipPath:"polygon(0 0, 0% 0, 0% 100%, 0% 100%)"}, "-=0.1")
-  .fromTo(".wback", {opacity:1}, {opacity:0, duration:1}, "<")
-  .fromTo(".bgimage", {scale:1, autoAlpha:1}, {duration: 0.2, scale:1.3, autoAlpha:0}, "<-0.3")
-  .fromTo(".main-link", {autoAlpha:1, x:0}, {x:-40, stagger:0.1, duration: 0.5, autoAlpha:0}, "<0.1")
-  .fromTo(".small-link", {autoAlpha:1, x:0}, {x:-200, stagger:0.1, duration:0.5, autoAlpha:0}, "<0.1")
-  .fromTo(".left-language", {autoAlpha:1}, {autoAlpha:0, stagger:0.1, duration:0.5}, "<")
-  .fromTo(".tickerwrapper", {autoAlpha:1}, {duration: 0.15, autoAlpha:0}, "<-0.8");
-  */
-  
+
   
   
   
