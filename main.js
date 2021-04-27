@@ -331,9 +331,9 @@ RESIZE CANVAS IN VW
 ====================================
 */
 
-function setUpCanvas() {
+//function setUpCanvas() {
   canvas = document.getElementsByClassName("blob-wrap")[0];
-  ctx = canvas.getContext('2d');
+ // ctx = canvas.getContext('2d');
   ctx.translate(0.5, 0.5);
 
   // Set display size (vw/vh).
@@ -345,9 +345,9 @@ function setUpCanvas() {
   canvas.height = sizeHeight;
   canvas.style.width = sizeWidth;
   canvas.style.height = sizeHeight;
-}
+//}
 
-window.onload = setUpCanvas();
+//window.onload = setUpCanvas();
 
 console.log("HRESIZEDDD");
 /*
