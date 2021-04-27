@@ -121,9 +121,9 @@ canvas {
     touch-action: none; 
     background: transparent;
     /*mix-blend-mode: screen;*/
-      top: 5.250em;
-    /*  width: 112em; */
-      left: -5.688em;
+      top: 50%;
+    /*  width: 112em; 
+      left: -5.688em;*/
   }
  
 
