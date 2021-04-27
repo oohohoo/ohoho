@@ -332,7 +332,7 @@ RESIZE CANVAS IN VW
 */
 
 function setUpCanvas() {
-  canvas = document.getElementsByClassName("canvas_hangman")[0];
+  canvas = document.getElementsByClassName("blob-wrap")[0];
   ctx = canvas.getContext('2d');
   ctx.translate(0.5, 0.5);
 
