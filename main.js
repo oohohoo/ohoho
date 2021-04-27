@@ -330,7 +330,7 @@ init = function() {
 }
 
 init();
-canvas.style.zIndex = 1;
+canvas.style.zIndex = 0;
 
 
 
