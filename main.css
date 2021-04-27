@@ -118,12 +118,13 @@ z-index:9999;
 canvas { 
 
     position: absolute; 
+    width: 100%;
     touch-action: none; 
     background: transparent;
     /*mix-blend-mode: screen;*/
       top: 5.250em;
     /*  width: 112em; */
-      left: -5.688em;
+      /*left: -5.688em;
   }
  
 
