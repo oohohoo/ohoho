@@ -276,7 +276,7 @@ init = function() {
   canvas.setAttribute('touch-action', 'none');
   canvas.style.zIndex = 0;
 
-  var container = document.querySelector('.blob-wrap')
+  var container = document.querySelector('.blob-wrapper')
   container.appendChild(canvas);
   //document.body.appendChild(canvas);
 
