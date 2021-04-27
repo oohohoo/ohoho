@@ -142,7 +142,7 @@ class Blob {
     }
   }
   get radius() {
-    return this._radius || 400;
+    return this._radius || 600;
   }
   
   set position(value) {
