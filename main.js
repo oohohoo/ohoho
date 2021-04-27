@@ -259,14 +259,6 @@ var ctx = canvas.getContext('2d');
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  var canvas = document.createElement('canvas')
-
-  
-
- 
-
-})
 
 
 blob = new Blob;
