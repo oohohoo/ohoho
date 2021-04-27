@@ -124,7 +124,7 @@ canvas {
       /*top: 15em;*/
       width: 100%;
       
-      /*transform: translateY(-50%); */
+      transform: translateY(-50%); 
     /*  width: 112em; 
       left: -5.688em;*/
   }
