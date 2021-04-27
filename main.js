@@ -136,7 +136,7 @@ class Blob {
     }
   }
   get radius() {
-    return this._radius || 280;
+    return this._radius || 250;
   }
   
   set position(value) {
@@ -337,7 +337,7 @@ RESIZE CANVAS IN VW
   ctx.translate(0.5, 0.5);
 
   // Set display size (vw/vh).
-  var sizeWidth = 50 * window.innerWidth / 100,
+  var sizeWidth = 80 * window.innerWidth / 100,
     sizeHeight = 100 * window.innerHeight / 100 || 766;
 
   //Setting the canvas site and width to be responsive 
