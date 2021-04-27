@@ -121,7 +121,7 @@ canvas {
     touch-action: none; 
     background: transparent;
     /*mix-blend-mode: screen;*/
-      top: 15em;
+      /*top: 15em;*/
       width: 100%;
       /*transform: translateY(-50%); */
     /*  width: 112em; 
