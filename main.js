@@ -258,13 +258,27 @@ var ctx = canvas.getContext('2d');
 */
 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  var canvas = document.createElement('canvas')
+
+  
+
+ 
+
+})
+
+
 blob = new Blob;
 
 init = function() {
   canvas = document.createElement('canvas');
   canvas.setAttribute('touch-action', 'none');
   canvas.style.zIndex = 0;
-  document.body.appendChild(canvas);
+
+  var container = document.querySelector('.blob-wrap')
+  container.appendChild(canvas);
+  //document.body.appendChild(canvas);
 
   let resize = function() {
     canvas.width = window.innerWidth;
