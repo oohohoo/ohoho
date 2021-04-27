@@ -330,7 +330,7 @@ canvas.height = scr.h
 RESIZE CANVAS IN VW
 ====================================
 */
-/*
+
 function setUpCanvas() {
   canvas = document.getElementsByClassName("blob-wrap")[0];
   ctx = canvas.getContext('2d');
