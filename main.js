@@ -337,7 +337,7 @@ RESIZE CANVAS IN VW
   ctx.translate(0.5, 0.5);
 
   // Set display size (vw/vh).
-  var sizeWidth = 100 * window.innerWidth / 100,
+  var sizeWidth = 50 * window.innerWidth / 100,
     sizeHeight = 100 * window.innerHeight / 100 || 766;
 
   //Setting the canvas site and width to be responsive 
