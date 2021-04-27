@@ -22,6 +22,12 @@ CANVAS BLOB
 ===
 */
 
+
+
+
+
+
+
 let canvas, ctx;
 let render, init;
 let blob;
@@ -238,6 +244,20 @@ class Point {
   }
 }
 
+
+/*
+var canvas = document.getElementById('my_canvas');
+// Set width height.  You should probably use the width/height of the div.
+canvas.width = 300;
+canvas.height = 300;
+var ctx = canvas.getContext('2d');
+//  Draw something with ctx.....
+//  ....
+
+
+*/
+
+
 blob = new Blob;
 
 init = function() {
@@ -310,7 +330,7 @@ init = function() {
 }
 
 init();
-/*canvas.style.zIndex = 99;*/
+canvas.style.zIndex = 1;
 
 
 
