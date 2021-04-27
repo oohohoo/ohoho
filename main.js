@@ -263,7 +263,7 @@ blob = new Blob;
 init = function() {
   canvas = document.createElement('canvas');
   canvas.setAttribute('touch-action', 'none');
-
+  canvas.style.zIndex = 0;
   document.body.appendChild(canvas);
 
   let resize = function() {
@@ -330,7 +330,7 @@ init = function() {
 }
 
 init();
-canvas.style.zIndex = 0;
+
 
 
 
