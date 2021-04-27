@@ -123,6 +123,7 @@ canvas {
     background: transparent;
     /*mix-blend-mode: screen;*/
       top: 5.250em;
+      z-index: 1;
     /*  width: 112em; 
       /*left: -5.688em;*/
   }
