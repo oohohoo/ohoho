@@ -11,10 +11,9 @@ function buttomer() {
 document.querySelectorAll('img').forEach(button => {  
 
 let tween = gsap.to(button, {
-  scale: randomNumber(0.2, 0.9),
- // rotate: randomNumber(30, -30),
+  scale: randomNumber(0.1, 0.9),
+  rotate: randomNumber(90, -90),
   ease: 'power4.out',
-  opacity: .8,
   paused: true,
  // background:"white",
  //x: randomNumber(-120, 120),
