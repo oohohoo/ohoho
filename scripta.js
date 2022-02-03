@@ -62,7 +62,7 @@ const noise = () => {
         setup();
     })();
 };
-noise();</script>
+noise();
 
 
 // SCROLL TO TOP
