@@ -96,7 +96,7 @@ function createLine(leader, i) {
 
 gsap.timeline()
 	//  .fromTo(".lajna", {height: "0%"}, {height: "100%", stagger:0.15, duration:0.8, ease: Power3.easeOut});
-var boxes = document.querySelectorAll(".col");
+var boxes = document.querySelectorAll(".o");
 for (i = 0; i < boxes.length; i++) {
   animateMe(boxes[i]);
 }
