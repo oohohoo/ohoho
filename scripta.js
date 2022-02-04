@@ -11,8 +11,8 @@ function buttomer() {
 document.querySelectorAll('img').forEach(button => {  
 
 let tween = gsap.to(button, {
-  scale: randomNumber(0.1, 0.9),
-  rotate: randomNumber(90, -90),
+  //scale: randomNumber(0.1, 0.9),
+  rotate: -90,
   ease: 'power4.out',
   paused: true,
  // background:"white",
@@ -24,7 +24,7 @@ button.addEventListener('mouseenter', () => {
   gsap.to(tween, {duration: .5, time: tween.duration(), ease: 'power4.out'});
 });
 button.addEventListener('mouseleave', () => {
-  gsap.to(tween, {duration: 2, time: 0, ease: 'none', overwrite: true});
+  gsap.to(tween, {duration: 2, delay: 3, time: 0, ease: 'none', overwrite: true});
 });
 
 });
