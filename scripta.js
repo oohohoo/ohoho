@@ -239,7 +239,7 @@ cols.forEach((col, i) => {
     let direction = i % 2 !== 0 ? "+=" : "-="; // Change direction for odd columns
 
     gsap.to(item, {
-      y: direction + Number(columnHeight / 4),
+      y: direction + Number(columnHeight / 2),
       duration: 60,
       repeat: -1,
       ease: "none",
@@ -247,7 +247,7 @@ cols.forEach((col, i) => {
         y: gsap.utils.unitize((y) => {
           if (direction == "+=") {
             offset += additionalY.val;
-            y = (parseFloat(y) - offset) % (columnHeight * 0.5);
+            y = (parseFloat(y) - offset) % (columnHeight * 2);
           } else {
             offset += additionalY.val;
             y = (parseFloat(y) + offset) % -Number(columnHeight * 0.5);
