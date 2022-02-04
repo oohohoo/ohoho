@@ -137,12 +137,12 @@ smoothScroll("#content");
 // });
 
 
-ScrollTrigger.create({
+/* ScrollTrigger.create({
   trigger: ".box-a",
   pin: true,
   end: "max"
 })
-
+ */
 
 
 // this is the helper function that sets it all up. Pass in the content <div> and then the wrapping viewport <div> (can be the elements or selector text). It also sets the default "scroller" to the content so you don't have to do that on all your ScrollTriggers.
@@ -239,7 +239,7 @@ cols.forEach((col, i) => {
     let direction = i % 2 !== 0 ? "+=" : "-="; // Change direction for odd columns
 
     gsap.to(item, {
-      y: direction + Number(columnHeight / 2),
+      y: direction + Number(columnHeight / 4),
       duration: 60,
       repeat: -1,
       ease: "none",
