@@ -8,7 +8,7 @@ window.onbeforeunload = function () {
 
 // HOVER BUTTON
 function buttomer() {
-document.querySelectorAll('img').forEach(button => {  
+document.querySelectorAll('.h').forEach(button => {  
 
 let tween = gsap.to(button, {
   //scale: randomNumber(0.1, 0.9),
