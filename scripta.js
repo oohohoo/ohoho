@@ -21,10 +21,10 @@ let tween = gsap.to(button, {
 });
 
 button.addEventListener('mouseenter', () => {
-  gsap.to(tween, {duration: 1, time: tween.duration()});
+  gsap.to(tween, {duration: 1});
 });
 button.addEventListener('mouseleave', () => {
-  gsap.to(tween, {duration: 2, delay: 3, time: 0, clearProps:"all", overwrite: true});
+  gsap.to(tween, {duration: 2, delay: 3, clearProps:"all", overwrite: true});
 });
 
 });
