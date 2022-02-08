@@ -13,7 +13,7 @@ document.querySelectorAll('.svg-sizer').forEach(button => {
 let tween = gsap.to(button, {
   //scale: randomNumber(0.1, 0.9),
   rotate: -90,
-  ease: 'power3.inOut',
+  ease: 'power3.out',
   paused: true,
  // background:"white",
  //x: randomNumber(-120, 120),
