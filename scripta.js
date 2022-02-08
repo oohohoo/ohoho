@@ -8,7 +8,7 @@ window.onbeforeunload = function () {
 
 // HOVER BUTTON
 function buttomer() {
-document.querySelectorAll('.h').forEach(button => {  
+document.querySelectorAll('.svg-container').forEach(button => {  
 
 let tween = gsap.to(button, {
   //scale: randomNumber(0.1, 0.9),
@@ -29,6 +29,7 @@ button.addEventListener('mouseleave', () => {
 
 });
 }
+
 
 buttomer();
 
