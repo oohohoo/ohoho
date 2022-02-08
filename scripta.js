@@ -20,10 +20,10 @@ let tween = gsap.to(button, {
   //y: randomNumber(-120, 120),
 });
 
-button.addEventListener('mouseover', () => {
+button.addEventListener('mouseenter', () => {
   gsap.to(tween, {duration: 1, time: tween.duration(), ease: 'power3.inOut', overwrite: true});
 });
-button.addEventListener('mouseout', () => {
+button.addEventListener('mouseleave', () => {
   gsap.to(tween, {duration: 2, delay: 3, time: 0, ease: 'none', overwrite: true});
 });
 
