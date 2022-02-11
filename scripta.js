@@ -31,7 +31,7 @@ let tweenout = gsap.to(button, {
 });
 
 button.addEventListener('mouseenter', () => {
-  gsap.to(tween, {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
+  gsap.to(tweenout, {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
 });
 button.addEventListener('mouseleave', () => {
   gsap.to(tweenout, {duration: 1, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
