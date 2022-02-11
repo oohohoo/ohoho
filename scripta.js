@@ -116,7 +116,7 @@ function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-// SCROLLER
+// SMMOTH SCROLLER
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -217,6 +217,8 @@ function smoothScroll(content, viewport, smoothness) {
 		onRefresh: killScrub // when the screen resizes, we just want the animation to immediately go to the appropriate spot rather than animating there, so basically kill the scrub.
 	});
 }
+
+/* OHOHO SCROLLER*/
 
 // for a horizontal version, see https://codepen.io/GreenSock/pen/rNmQPpa?editors=0010
 gsap.registerPlugin(ScrollTrigger);
