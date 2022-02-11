@@ -22,7 +22,7 @@ let tween = gsap.to(button, {
 
 let tweenout = gsap.to(button, {
   //scale: randomNumber(0.1, 0.9),
-  rotate: -90,
+  rotate: -180,
  // ease: 'power4.out',
   paused: true,
  // background:"white",
