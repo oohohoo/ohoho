@@ -28,7 +28,7 @@ gsap.utils.toArray(".o-hover").forEach(container => {
      /*  silhouette = container.querySelector(".silhouette .cover"), */
       tl = gsap.timeline({ paused: true });
   
-  tl.to(circle, { strokeWidth:250 })
+  tl.to(circle, { duration: 0.8, strokeWidth:250, ease: 'power3.inOut' })
     /* .to(silhouette, { opacity: 0 }, 0); */
   
   container.addEventListener("mouseenter", () => tl.play() );
