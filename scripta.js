@@ -25,27 +25,24 @@ gsap.to("#di", {
 
 
 // HOVER O
-function hovero() {
-  document.querySelectorAll('#circle').forEach(objekto => {  
+function buttomer() {
+  document.querySelectorAll('#circle').forEach(button => {  
   
-  let tween = gsap.to(objekto, {
-    strokeWidth:200,
-    
+  let tween = gsap.to(button, {
+    duration: 3, strokeWidth:200, repeat:200, yoyo:true
   });
   
-  /* gsap.set("#circle",{strokeWidth:58}) */
   
-  objekto.addEventListener('mouseenter', () => {
-    gsap.to(tween, {duration: 0.8, time: tween.duration(), ease: 'power2.out'});
+  button.addEventListener('mouseenter', () => {
+    gsap.to(tween, {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
   });
-  objekto.addEventListener('mouseleave', () => {
-    gsap.to(tween, {duration: 2, ease: 'power3.inOut', clearProps:"all"});
+  button.addEventListener('mouseleave', () => {
+    gsap.to(tween, {strokeWidth:58, duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
   });
   
   });
   }
-  hovero(); 
-  
+  buttomer(); 
 
 
 // HOVER BUTTON
