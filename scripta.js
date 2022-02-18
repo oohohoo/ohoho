@@ -29,17 +29,17 @@ function hovero() {
   document.querySelectorAll('.o-hover').forEach(objekto => {  
   
   let tween = gsap.to(objekto, {
-    strokeWidth:30,
+    strokeWidth:200,
     
   });
   
-  gsap.set("#circle",{strokeWidth:58})
+  /* gsap.set("#circle",{strokeWidth:58}) */
   
   objekto.addEventListener('mouseenter', () => {
-    gsap.to("#circle", {strokeWidth:200,duration: 0.8, time: tween.duration(), ease: 'power2.out'});
+    gsap.to(tween, {duration: 0.8, time: tween.duration(), ease: 'power2.out'});
   });
   objekto.addEventListener('mouseleave', () => {
-    gsap.to("#circle", {strokeWidth:58, duration: 2, ease: 'power3.inOut', clearProps:"all"});
+    gsap.to(tween, {duration: 2, ease: 'power3.inOut', clearProps:"all"});
   });
   
   });
