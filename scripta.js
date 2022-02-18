@@ -34,10 +34,10 @@ function hovero() {
   
   
   button.addEventListener('mouseenter', () => {
-    gsap.to(tween, {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
+    gsap.to("#circle", {duration: 1, strokeWidth:250, time: tween.duration(), ease: 'power3.inOut'});
   });
   button.addEventListener('mouseleave', () => {
-    gsap.to(tween, {strokeWidth:58, duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
+    gsap.to("#circle", {strokeWidth:58, duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
   });
   
   });
