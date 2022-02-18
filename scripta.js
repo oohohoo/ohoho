@@ -21,10 +21,10 @@ function hovero() {
   
   
   objekto.addEventListener('mouseenter', () => {
-    gsap.to(tween, {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
+    gsap.to("#circle", {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
   });
   objekto.addEventListener('mouseleave', () => {
-    gsap.to(tween, {duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
+    gsap.to("#circle" {duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
   });
   
   });
