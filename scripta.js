@@ -29,7 +29,7 @@ function hovero() {
   document.querySelectorAll('#circle').forEach(button => {  
   
   let tween = gsap.to(button, {
-    duration: 3, strokeWidth:200, repeat:200, yoyo:true
+    duration: 3, strokeWidth:250, repeat:200, yoyo:true
   });
   
   
