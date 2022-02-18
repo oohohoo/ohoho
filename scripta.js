@@ -25,7 +25,7 @@ gsap.to("#di", {
 
 
 // HOVER O
-function buttomer() {
+function hovero() {
   document.querySelectorAll('#circle').forEach(button => {  
   
   let tween = gsap.to(button, {
@@ -42,7 +42,7 @@ function buttomer() {
   
   });
   }
-  buttomer(); 
+  hovero(); 
 
 
 // HOVER BUTTON
