@@ -6,10 +6,34 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
+
+
+/* gsap.to("#circle",{duration: 3, strokeWidth:30, repeat:200, yoyo:true}) */
+
+// HOVER O
+function hovero() {
+  document.querySelectorAll('#circle').forEach(objekto => {  
+  
+  let tween = gsap.to(objekto, {
+    strokeWidth:30,
+    
+  });
+  
+  
+  objekto.addEventListener('mouseenter', () => {
+    gsap.to(tween, {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
+  });
+  objekto.addEventListener('mouseleave', () => {
+    gsap.to(tween, {duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
+  });
+  
+  });
+  }
+  hovero(); 
+  
+
+
 // HOVER BUTTON
-
-
-
 function buttomer() {
 document.querySelectorAll('.svg-sizer').forEach(button => {  
 
@@ -33,8 +57,6 @@ button.addEventListener('mouseleave', () => {
 
 });
 }
-
-
 buttomer(); 
 
 
