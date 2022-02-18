@@ -27,11 +27,38 @@ let t= gsap.to(button, {
   t.restart();
 }) */
 
-$(button).mouseenter(function(){
+document.querySelector(button).addEventListener("click", function() {
+   t.invalidate().restart()  
+});
+/* 
+document.querySelector(button).addEventListener("click", function() {
+  testVariable2 += 100
+  t2.invalidate().restart()  
+}); */
+
+
+
+/* $(button).mouseenter(function(){
   t.invalidate();
   console.log("iROTTTT");
   t.restart();
-})
+}) */
+
+
+
+
+
+
+
+
+button.addEventListener('mouseenter', () => {
+  gsap.to(t, {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
+});
+button.addEventListener('mouseleave', () => {
+  gsap.to(t, {duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
+});
+
+
 
 });
 }
