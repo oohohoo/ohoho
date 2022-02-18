@@ -32,7 +32,7 @@ gsap.utils.toArray(".o-hover").forEach(container => {
     /* .to(silhouette, { opacity: 0 }, 0); */
   
   container.addEventListener("mouseenter", () => tl.play() );
-  container.addEventListener("mouseleave", () => tl.reverse({ delay: 5 }) );
+  container.addEventListener("mouseleave", () => tl.timeScale(speedOfAnim).delay(1).restart(true) );
 });
 
 
