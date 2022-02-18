@@ -15,11 +15,11 @@ gsap.to("#di", {
   morphSVG: {
     shape: "#sq"
   },
-  duration: 0.8,
+  duration: 0.4,
   repeat: -1,
   yoyo: true,
   repeatDelay: 1,
-  ease: 'power3.inOut'
+  ease: 'power2.inOut'
 });
 
 
