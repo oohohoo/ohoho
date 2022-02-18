@@ -19,8 +19,8 @@ let t= gsap.to(button, {
   //ease: 'power4.out',
   //paused: true,
  // background:"white",
- //x: randomNumber(-120, 120),
-  //y: randomNumber(-120, 120),
+x: randomNumber(-120, 120),
+  y: randomNumber(-120, 120),
 });
 
 /* $(button).click(function(){
