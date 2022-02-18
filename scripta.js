@@ -98,7 +98,7 @@ function createLine(leader, i) {
 }
 
 // FLICKER
-
+/*
 gsap.timeline()
 	//  .fromTo(".lajna", {height: "0%"}, {height: "100%", stagger:0.15, duration:0.8, ease: Power3.easeOut});
 var boxes = document.querySelectorAll(".col");
@@ -118,7 +118,7 @@ function animateMe(box) {
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
-
+*/
 // SMMOTH SCROLLER
 
 gsap.registerPlugin(ScrollTrigger);
