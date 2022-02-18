@@ -88,6 +88,8 @@ buttomer();
 
 
 // MOUSE TRAIL
+
+/*
 gsap.defaults({ease: 'none'});
 
 var svgns = "http://www.w3.org/2000/svg";
@@ -167,7 +169,7 @@ function animateMe(box) {
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
-
+*/
 // SMMOTH SCROLLER
 
 gsap.registerPlugin(ScrollTrigger);
