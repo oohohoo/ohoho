@@ -48,7 +48,7 @@ document.querySelector(button).addEventListener("click", function() {
 
 
 
-
+/* 
 
 
 button.addEventListener('mouseenter', () => {
@@ -58,7 +58,7 @@ button.addEventListener('mouseleave', () => {
   gsap.to(t, {duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
 });
 
-
+ */
 
 });
 }
