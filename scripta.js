@@ -15,7 +15,7 @@ function buttomer() {
 let t= gsap.to(button, {
   //scale: randomNumber(0.1, 0.9),
    rotate: "-=90", 
-  x:"+=100",
+ // x:"+=100",
   //ease: 'power4.out',
   //paused: true,
  // background:"white",
