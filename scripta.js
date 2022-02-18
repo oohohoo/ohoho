@@ -8,6 +8,36 @@ window.onbeforeunload = function () {
 
 // HOVER BUTTON
 function buttomer() {
+  document.querySelectorAll('.svg-sizer').forEach(button => {  
+
+/* var t = gsap.to(".green", 1, {x:"+=100"}); */
+
+let t= gsap.to(button, {
+  //scale: randomNumber(0.1, 0.9),
+  rotate: -90,
+  //ease: 'power4.out',
+  paused: true,
+ // background:"white",
+ //x: randomNumber(-120, 120),
+  //y: randomNumber(-120, 120),
+});
+
+/* $(button).click(function(){
+  t.restart();
+}) */
+
+$(button).click(function(){
+  t.invalidate();
+  t.restart();
+})
+
+});
+}
+
+buttomer();
+
+/* 
+function buttomer() {
 document.querySelectorAll('.svg-sizer').forEach(button => {  
 
 let tween = gsap.to(button, {
@@ -32,7 +62,7 @@ button.addEventListener('mouseleave', () => {
 }
 
 
-buttomer();
+buttomer(); */
 
 
 // MOUSE TRAIL
