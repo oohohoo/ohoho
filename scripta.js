@@ -23,6 +23,20 @@ gsap.to("#di", {
 });
 
 
+gsap.utils.toArray(".o-hover").forEach(container => {
+  let circle = container.querySelector(".hoverio"),
+     /*  silhouette = container.querySelector(".silhouette .cover"), */
+      tl = gsap.timeline({ paused: true });
+  
+  tl.to(circle, { strokeWidth:250 })
+    /* .to(silhouette, { opacity: 0 }, 0); */
+  
+  container.addEventListener("mouseenter", () => tl.play() );
+  container.addEventListener("mouseleave", () => tl.reverse() );
+});
+
+
+/*
 
 // HOVER O
 function hovero() {
@@ -43,7 +57,7 @@ function hovero() {
   });
   }
   hovero(); 
-
+*/
 
 // HOVER BUTTON
 function buttomer() {
