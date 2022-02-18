@@ -12,7 +12,7 @@ window.onbeforeunload = function () {
 
 // HOVER O
 function hovero() {
-  document.querySelectorAll('#circle').forEach(objekto => {  
+  document.querySelectorAll('.o-hover').forEach(objekto => {  
   
   let tween = gsap.to(objekto, {
     strokeWidth:30,
