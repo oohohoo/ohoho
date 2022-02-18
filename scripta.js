@@ -19,12 +19,13 @@ function hovero() {
     
   });
   
+  gsap.set("#circle",{strokeWidth:58})
   
   objekto.addEventListener('mouseenter', () => {
-    gsap.to("#circle", {strokeWidth:300,duration: 1, time: tween.duration(), ease: 'power3.inOut'});
+    gsap.to("#circle", {strokeWidth:300,duration: 2, time: tween.duration(), ease: 'power3.inOut'});
   });
   objekto.addEventListener('mouseleave', () => {
-    gsap.to("#circle", {strokeWidth:30,duration: 2, time: 0, ease: 'power3.inOut', clearProps:"all"});
+    gsap.to("#circle", {strokeWidth:58, duration: 2, time: 0, ease: 'power3.inOut', clearProps:"all"});
   });
   
   });
