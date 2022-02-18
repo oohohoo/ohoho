@@ -10,6 +10,20 @@ window.onbeforeunload = function () {
 
 /* gsap.to("#circle",{duration: 3, strokeWidth:30, repeat:200, yoyo:true}) */
 
+/*H ANIMACIJA*/
+gsap.to("#di", {
+  morphSVG: {
+    shape: "#sq"
+  },
+  duration: 0.8,
+  repeat: -1,
+  yoyo: true,
+  repeatDelay: 1,
+  ease: 'power3.inOut'
+});
+
+
+
 // HOVER O
 function hovero() {
   document.querySelectorAll('.o-hover').forEach(objekto => {  
