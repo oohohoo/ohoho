@@ -28,12 +28,12 @@ gsap.utils.toArray(".o-hover").forEach(container => {
      /*  silhouette = container.querySelector(".silhouette .cover"), */
       tl = gsap.timeline({ paused: true });
   
-  tl.to(circle, { duration: 0.6, strokeWidth:280, ease: 'power3.out' })
+  tl.to(circle, { duration: 0.6, strokeWidth:280, ease: 'power3.inOut' })
   
     /* .to(silhouette, { opacity: 0 }, 0); */
   
   container.addEventListener("mouseenter", () => tl.play() );
-  container.addEventListener("mouseleave", () => tl.reverse(10) );
+  container.addEventListener("mouseleave", () => tl.reverse() );
 });
 
 
