@@ -247,6 +247,7 @@ function smoothScroll(content, viewport, smoothness) {
 /* OHOHO SCROLLER*/
 
 // for a horizontal version, see https://codepen.io/GreenSock/pen/rNmQPpa?editors=0010
+/*
 gsap.registerPlugin(ScrollTrigger);
 
 const additionalY = { val: 0 };
@@ -310,3 +311,4 @@ const imagesScrollerTrigger = ScrollTrigger.create({
 });
 
 
+*/
