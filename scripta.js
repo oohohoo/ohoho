@@ -17,7 +17,7 @@ let t= gsap.to(button, {
    rotate: "-=90", 
  // x:"+=100",
   //ease: 'power4.out',
-  //paused: true,
+  paused: true,
  // background:"white",
  //x: randomNumber(-120, 120),
   //y: randomNumber(-120, 120),
