@@ -18,9 +18,8 @@ gsap.to("#di", {
   duration: 0.4,
   repeat: -1,
   yoyo: true,
-  repeatDelay: 3,
-  stagger: 0.2,
-  ease: 'power2.inOut'
+  repeatDelay: 1,
+  ease: 'power2.out'
 });
 
 
