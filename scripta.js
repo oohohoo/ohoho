@@ -27,7 +27,7 @@ let t= gsap.to(button, {
   t.restart();
 }) */
 
-$(button).click(function(){
+$(button).mouseover(function(){
   t.invalidate();
   console.log("iROTTTT");
   t.restart();
