@@ -29,7 +29,7 @@ let t= gsap.to(button, {
 
 $(button).click(function(){
   t.invalidate();
-  console.log("invalidate");
+  console.log("iROTTTT");
   t.restart();
 })
 
