@@ -24,7 +24,7 @@ function hovero() {
     gsap.to("#circle", {duration: 1, time: tween.duration(), ease: 'power3.inOut'});
   });
   objekto.addEventListener('mouseleave', () => {
-    gsap.to("#circle" {duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
+    gsap.to("#circle", {duration: 2, delay: 3, time: 0, ease: 'power3.inOut', clearProps:"all"});
   });
   
   });
