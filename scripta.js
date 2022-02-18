@@ -26,7 +26,7 @@ gsap.to("#di", {
 
 // HOVER O
 function hovero() {
-  document.querySelectorAll('#circlec').forEach(button => {  
+  document.querySelectorAll('#circle').forEach(button => {  
   
   let tween = gsap.to(button, {
     duration: 3, strokeWidth:250, repeat:200, yoyo:true
