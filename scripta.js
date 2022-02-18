@@ -29,10 +29,11 @@ gsap.utils.toArray(".o-hover").forEach(container => {
       tl = gsap.timeline({ paused: true });
   
   tl.to(circle, { duration: 0.8, strokeWidth:250, ease: 'power3.inOut' })
+  tl2.to(circle, { duration: 0.8, strokeWidth:58, ease: 'power3.inOut' })
     /* .to(silhouette, { opacity: 0 }, 0); */
   
   container.addEventListener("mouseenter", () => tl.play() );
-  container.addEventListener("mouseleave", () => tl.reverse(5) );
+  container.addEventListener("mouseleave", () => tl2.play() );
 });
 
 
