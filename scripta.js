@@ -108,7 +108,7 @@ window.addEventListener("mousemove", function(event) {
 
 var leader = pointer;
 
-var total = 100;
+var total = 20;
 for (var i = 0; i < total; i++) {
   leader = createLine(leader, i);
 }
