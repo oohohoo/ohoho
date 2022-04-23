@@ -4,7 +4,6 @@
 // NOVO ////////
 
 // MATTER.JS
-
 class Bubbles {
   constructor(options) {
     this.options = {
@@ -158,7 +157,6 @@ class Bubbles {
 window.addEventListener('DOMContentLoaded', () => {
   new Bubbles();
 });
-
 
 
 // SCROLL TO TOP
