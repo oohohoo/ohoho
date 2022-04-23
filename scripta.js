@@ -329,7 +329,11 @@ function animateMe(box) {
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
-*/
+
+
+
+
+
 // SMMOTH SCROLLER
 
 gsap.registerPlugin(ScrollTrigger);
