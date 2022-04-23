@@ -6094,7 +6094,7 @@ var Mouse = __webpack_require__(13);
                 height: 600,
                 pixelRatio: 1,
                 background: '#1E1E1C',
-                wireframeBackground: '#ff0000',
+                wireframeBackground: '#1E1E1C',
                 hasBounds: !!options.bounds,
                 enabled: true,
                 wireframes: true,
