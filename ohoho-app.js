@@ -67,11 +67,11 @@ MATTER.JS
 
         // resize O
         function percentX(percent) {
-            return Math.round(10.5 / 100 * window.innerWidth);
+            return Math.round(10 / 100 * window.innerWidth);
         }
         // resize H
         function percentY(percent) {
-            return Math.round(19 / 100 * window.innerWidth);
+            return Math.round(18.5 / 100 * window.innerWidth);
         }
 
         // ADD OBJECTS
