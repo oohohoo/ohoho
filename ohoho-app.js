@@ -78,8 +78,8 @@ MATTER.JS
 
         // ADD O-1
 
-        var ball = Matter.Bodies.circle(10, 0.1, percentX(), {
-             force: { x: 1, y: 0 },
+        var ball = Matter.Bodies.circle(0.1, 0.1, percentX(), {
+            /*  force: { x: 1, y: 0 }, */
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.00001,
