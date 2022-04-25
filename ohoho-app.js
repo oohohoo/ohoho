@@ -67,11 +67,11 @@ MATTER.JS
 
         // resize O
         function percentX(percent) {
-            return Math.round(10 / 100 * window.innerWidth);
+            return Math.round(9 / 100 * window.innerWidth);
         }
         // resize H
         function percentY(percent) {
-            return Math.round(20 / 100 * window.innerWidth);
+            return Math.round(19 / 100 * window.innerWidth);
         }
 
         // ADD OBJECTS
@@ -195,7 +195,7 @@ MATTER.JS
 
         // GRAVITY
 
-        engine.world.gravity.y = 0.01;
+        engine.world.gravity.y = 0.6;
 
         // MAKE INTERACTIVE / MOUSE
 
