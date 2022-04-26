@@ -97,7 +97,7 @@ MATTER.JS
 
         // ADD O-1
 
-        var ball = Matter.Bodies.circle(50, 0.1, percentX(), {
+        var ball = Matter.Bodies.circle(0.1, 0.1, percentX(), {
             /*  force: { x: 1, y: 0 }, */
             density: 0.04,
             friction: 0.01,
@@ -218,16 +218,17 @@ MATTER.JS
 
         // MAKE INTERACTIVE / MOUSE
 
-        var mouseConstraint = Matter.MouseConstraint.create(engine, { //Create Constraint
-            element: canvas,
+        var mouse = Matter.Mouse.create(render.canvas),
+        mouseConstraint = Matter.MouseConstraint.create(engine, {
+            mouse: mouse,
             constraint: {
+                stiffness: 0.2,
                 render: {
                     visible: false
-                },
-                // KAKO OBJEKT REAGIRA NA MIŠA / manja vrijednost teže reagira 
-                stiffness: 0.2
+                }
             }
         });
+  
 
         mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
         mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
@@ -235,10 +236,65 @@ MATTER.JS
 
         Matter.World.add(world, mouseConstraint);
 
+        render.mouse = mouse;
+
         // START THE ENGINE
 
         Matter.Runner.run(engine);
         Matter.Render.run(render);
+
+
+/*
+================================================================================
+MATTER.JS EVENTS
+================================================================================
+*/
+
+/* SHAKE SCENE AFTER 5 SECONDS */
+
+Matter.Events.on(engine, 'beforeUpdate', function(event) {
+    var engine = event.source;
+
+    // apply random forces every 5 secs
+    if (event.timestamp % 5000 < 50)
+        shakeScene(engine);
+});
+
+
+ var shakeScene = function(engine) {
+    var bodies = Matter.Composite.allBodies(engine.world);
+
+    for (var i = 0; i < bodies.length; i++) {
+        var body = bodies[i];
+
+        if (!body.isStatic && body.position.y >= 500) {
+            var forceMagnitude = 0.006 * body.mass;
+
+            Matter.Body.applyForce(body, body.position, { 
+                x: (forceMagnitude + Matter.Common.random() * forceMagnitude) * Matter.Common.choose([1, -1]), 
+                y: -forceMagnitude + Matter.Common.random() * -forceMagnitude
+            });
+        }
+    }
+};
+
+
+  /* MOUSE EVENT DRAG*/
+  
+  // an example of using mouse events on a mouse
+  Matter.Events.on(mouseConstraint, 'startdrag', function(event) {
+    ball.render.fillStyle = '#8E8E8E';
+  });
+
+
+// an example of using mouse events on a mouse
+  Matter.Events.on(mouseConstraint, 'enddrag', function(event) {
+       ball.render.fillStyle = '#b6fa00';
+  });
+  
+
+
+
 
 
 /*
