@@ -41,6 +41,7 @@ MATTER.JS
                 wireframes: false,
                 showAngleIndicator: false,
                 showBounds: true,
+                showDebug: true,
 /*
                 hasBounds: false,
                 enabled: true,
