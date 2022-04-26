@@ -268,7 +268,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
         var body = bodies[i];
 
         if (!body.isStatic && body.position.y >= 500) {
-            var forceMagnitude = 0.006 * body.mass;
+            var forceMagnitude = 0.003 * body.mass;
 
             Matter.Body.applyForce(body, body.position, { 
                 x: (forceMagnitude + Matter.Common.random() * forceMagnitude) * Matter.Common.choose([1, -1]), 
