@@ -195,7 +195,7 @@ MATTER.JS
 
         // GRAVITY
 
-        engine.world.gravity.y = -0.01;
+        engine.world.gravity.y = 0.02;
 
         // MAKE INTERACTIVE / MOUSE
 
