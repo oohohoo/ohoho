@@ -284,14 +284,14 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
   
   // an example of using mouse events on a mouse
   Matter.Events.on(mouseConstraint, 'startdrag', function(event) {
-    ball.render.fillStyle = '#b6fa00';
+   // ball.render.fillStyle = '#b6fa00';
     o1.render.fillStyle = '#6fb000';
   });
 
 
 // an example of using mouse events on a mouse
   Matter.Events.on(mouseConstraint, 'enddrag', function(event) {
-       ball.render.fillStyle = '#8E8E8E';
+    //   ball.render.fillStyle = '#8E8E8E';
        o1.render.fillStyle = '#b6fa00';
   });
   
