@@ -177,7 +177,8 @@ MATTER.JS
         var floor = Matter.Bodies.rectangle(window.innerWidth / 2, window.innerHeight + 25, window.innerWidth, 50, {
             isStatic: true, //An immovable object
             render: {
-                visible: false
+                visible: false,
+                fillStyle: '#ff0000'
             }
         });
         Matter.World.add(world, floor);
@@ -188,7 +189,8 @@ MATTER.JS
         var leftWall = Matter.Bodies.rectangle(-25, window.innerHeight / 2, 50, window.innerHeight, {
             isStatic: true, //An immovable object
             render: {
-                visible: false
+                visible: false,
+                fillStyle: '#ff0000'
             }
         });
         Matter.World.add(world, leftWall);
@@ -198,7 +200,8 @@ MATTER.JS
         var rightWall = Matter.Bodies.rectangle(window.innerWidth + 25, window.innerHeight / 2, 50, window.innerHeight, {
             isStatic: true, //An immovable object
             render: {
-                visible: false
+                visible: false,
+                fillStyle: '#ff0000'
             }
         });
         Matter.World.add(world, rightWall);
@@ -208,7 +211,8 @@ MATTER.JS
         var ceiling = Matter.Bodies.rectangle(window.innerWidth / 2, -25, window.innerWidth, 50, {
             isStatic: true, //An immovable object
             render: {
-                visible: false
+                visible: false,
+                fillStyle: '#ff0000'
             }
         });
         Matter.World.add(world, ceiling);
