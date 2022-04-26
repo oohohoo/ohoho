@@ -293,7 +293,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
 // an example of using mouse events on a mouse
   Matter.Events.on(mouseConstraint, 'enddrag', function(event) {
     //   ball.render.fillStyle = '#8E8E8E';
-       o1.render.fillStyle = '#b6fa00';
+       o1.render.fillStyle = '#8E8E8E';
   });
   
 
