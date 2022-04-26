@@ -224,7 +224,7 @@ MATTER.JS
         mouseConstraint = Matter.MouseConstraint.create(engine, {
             mouse: mouse,
             constraint: {
-                stiffness: 0.2,
+                stiffness: 0.9,
                 render: {
                     visible: false
                 }
@@ -270,7 +270,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
         var body = bodies[i];
 
         if (!body.isStatic && body.position.y >= 500) {
-            var forceMagnitude = 0.0025 * body.mass;
+            var forceMagnitude = 0.0035 * body.mass;
 
             Matter.Body.applyForce(body, body.position, { 
                 x: (forceMagnitude + Matter.Common.random() * forceMagnitude) * Matter.Common.choose([1, -1]), 
