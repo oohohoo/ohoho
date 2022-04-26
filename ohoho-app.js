@@ -35,10 +35,28 @@ MATTER.JS
             options: {
                 width: window.innerWidth,
                 height: window.innerHeight,
-                pixeRatio: "auto",
-                background: '#1E1E1C',
-                wireframes: false,
-                showAngleIndicator: false
+                pixelRatio: 1,
+                background: '#fafafa',
+                wireframeBackground: '#222',
+                hasBounds: false,
+                enabled: true,
+                wireframes: true,
+                showSleeping: true,
+                showDebug: false,
+                showBroadphase: false,
+                showBounds: false,
+                showVelocity: false,
+                showCollisions: false,
+                showSeparations: false,
+                showAxes: false,
+                showPositions: false,
+                showAngleIndicator: false,
+                showIds: false,
+                showShadows: false,
+                showVertexNumbers: false,
+                showConvexHulls: false,
+                showInternalEdges: false,
+                showMousePosition: false
             }
         });
 
