@@ -215,7 +215,7 @@ MATTER.JS
 
         // GRAVITY
 
-        engine.world.gravity.y = 0.02;
+        engine.world.gravity.y = 0.4;
 
         // MAKE INTERACTIVE / MOUSE
 
@@ -269,7 +269,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
         var body = bodies[i];
 
         if (!body.isStatic && body.position.y >= 500) {
-            var forceMagnitude = 0.003 * body.mass;
+            var forceMagnitude = 0.001 * body.mass;
 
             Matter.Body.applyForce(body, body.position, { 
                 x: (forceMagnitude + Matter.Common.random() * forceMagnitude) * Matter.Common.choose([1, -1]), 
