@@ -90,7 +90,7 @@ ROLLING TEXT
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    top: 0.3rem;
+    top: 0.4rem;
 }
 
 .rolling-text:hover .letter,
