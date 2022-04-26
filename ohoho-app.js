@@ -39,7 +39,7 @@ MATTER.JS
                 background: '#1E1E1C',
                 wireframes: false,
                 showAngleIndicator: false,
-
+/*
                 hasBounds: false,
                 enabled: true,
                 showSleeping: true,
@@ -53,11 +53,12 @@ MATTER.JS
                 showPositions: false,
                 showAngleIndicator: false,
                 showIds: false,
-                showShadows: true,
+                showShadows: false,
                 showVertexNumbers: false,
                 showConvexHulls: false,
                 showInternalEdges: false,
                 showMousePosition: false
+                */
             }
         });
 
