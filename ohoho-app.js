@@ -40,7 +40,6 @@ MATTER.JS
                 background: '#1E1E1C',
                 wireframes: false,
                 showAngleIndicator: false,
-                showBounds: true,
                 showDebug: true,
 /*
                 hasBounds: false,
@@ -285,6 +284,16 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
         }
     }
 };
+
+
+/* SHAKE SCENU NA CLICK */
+
+Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
+    var mousePosition = event.mouse.position;
+        console.log('mousedown at ' + mousePosition.x + ' ' + mousePosition.y);
+    shakeScene(engine);
+});
+
 
 
   /* MOUSE EVENT DRAG*/
