@@ -40,7 +40,7 @@ MATTER.JS
                 background: '#1E1E1C',
                 wireframes: false,
                 showAngleIndicator: false,
-                showDebug: true,
+              //  showDebug: true,
 /*
                 hasBounds: false,
                 enabled: true,
