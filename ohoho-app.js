@@ -257,7 +257,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
     var engine = event.source;
 
     // apply random forces every 5 secs
-    if (event.timestamp % 60000 < 50)
+    if (event.timestamp % 30000 < 50)
         shakeScene(engine);
 });
 
@@ -269,7 +269,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
         var body = bodies[i];
 
         if (!body.isStatic && body.position.y >= 500) {
-            var forceMagnitude = 0.001 * body.mass;
+            var forceMagnitude = 0.0025 * body.mass;
 
             Matter.Body.applyForce(body, body.position, { 
                 x: (forceMagnitude + Matter.Common.random() * forceMagnitude) * Matter.Common.choose([1, -1]), 
