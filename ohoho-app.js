@@ -256,7 +256,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
     var engine = event.source;
 
     // apply random forces every 5 secs
-    if (event.timestamp % 5000 < 50)
+    if (event.timestamp % 15000 < 50)
         shakeScene(engine);
 });
 
