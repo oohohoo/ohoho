@@ -24,9 +24,10 @@ MATTER.JS
 
         // SETUP / MATTER.JS
 
-        var engine = Matter.Engine.create();
-        var world = engine.world;
-
+        var engine = Matter.Engine.create({
+            enableSleeping: true
+        }),
+        world = engine.world;
         // CREATE RENDERER
 
         var render = Matter.Render.create({
