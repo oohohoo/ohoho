@@ -35,7 +35,7 @@ MATTER.JS
             options: {
                 width: window.innerWidth,
                 height: window.innerHeight,
-                pixeRatio: "auto",
+                pixeRatio: 1,
                 background: '#1E1E1C',
                 wireframes: false,
                 showAngleIndicator: false,
@@ -45,7 +45,7 @@ MATTER.JS
                 showSleeping: true,
                 showDebug: true,
                 showBroadphase: false,
-                showBounds: false,
+                showBounds: true,
                 showVelocity: false,
                 showCollisions: true,
                 showSeparations: false,
