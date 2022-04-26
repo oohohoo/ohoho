@@ -97,7 +97,7 @@ MATTER.JS
 
         // ADD O-1
 
-        var ball = Matter.Bodies.circle(0.1, 0.1, percentX(), {
+        var o1 = Matter.Bodies.circle(0.1, 0.1, percentX(), {
             /*  force: { x: 1, y: 0 }, */
             density: 0.04,
             friction: 0.01,
@@ -109,7 +109,7 @@ MATTER.JS
                 lineWidth: 0
             }
         });
-        Matter.World.add(world, ball);
+        Matter.World.add(world, o1);
 
         // ADD H-1
         var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
@@ -256,7 +256,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
     var engine = event.source;
 
     // apply random forces every 5 secs
-    if (event.timestamp % 15000 < 50)
+    if (event.timestamp % 60000 < 50)
         shakeScene(engine);
 });
 
