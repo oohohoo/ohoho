@@ -93,7 +93,7 @@ MATTER.JS
         Matter.World.add(world, ball);
 
         // ADD H-1
-        var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
+        var ball = Matter.Bodies.rectangle(0.1, 0.1, percentY(), percentY(), {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.00001,
