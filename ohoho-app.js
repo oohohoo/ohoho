@@ -273,7 +273,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
 
     for (var i = 0; i < bodies.length; i++) {
         var body = bodies[i];
-
+// ovo ispod je bilo 500 pa nije radilo na smanjenim ekranima
         if (!body.isStatic && body.position.y >= 100) {
             var forceMagnitude = 0.0035 * body.mass;
 

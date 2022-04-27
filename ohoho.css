@@ -24,6 +24,12 @@ KILL WEBFLOW
     right: 1000px !important;
 }
 
+
+* {
+    transition: all .45s cubic-bezier(.55,0,.1,1)
+}
+
+
 /*
 ================================================================================
 SCROLLBAR STYLE
