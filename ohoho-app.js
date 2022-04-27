@@ -274,7 +274,7 @@ Matter.Events.on(engine, 'beforeUpdate', function(event) {
     for (var i = 0; i < bodies.length; i++) {
         var body = bodies[i];
 
-        if (!body.isStatic && body.position.y >= 500) {
+        if (!body.isStatic && body.position.y >= 100) {
             var forceMagnitude = 0.0035 * body.mass;
 
             Matter.Body.applyForce(body, body.position, { 
