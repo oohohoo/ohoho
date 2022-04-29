@@ -319,7 +319,7 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
   logo.addEventListener('click', () => {
     //const query = Matter.Query.point(ball, mouseConstraint.position)
    // ball.render.fillStyle = '#ff0000';
-   engine.world.gravity.y = -0.8;
+   engine.world.gravity.y = -0.3;
    // console.log(mouseConstraint.position);
    // console.log(query);
   });
