@@ -370,3 +370,35 @@ elements.forEach(element => {
     element.appendChild(textContainer);
     element.appendChild(textContainer.cloneNode(true));
 });
+
+
+/*
+================================================================================
+ENCODEMAIL
+================================================================================
+*/
+
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{("undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this).DataProtect=e()}}((function(){return function e(t,n,o){function r(s,f){if(!n[s]){if(!t[s]){var u="function"==typeof require&&require;if(!f&&u)return u(s,!0);if(i)return i(s,!0);var l=new Error("Cannot find module '"+s+"'");throw l.code="MODULE_NOT_FOUND",l}var d=n[s]={exports:{}};t[s][0].call(d.exports,(function(e){return r(t[s][1][e]||e)}),d,d.exports,e,t,n,o)}return n[s].exports}for(var i="function"==typeof require&&require,s=0;s<o.length;s++)r(o[s]);return r}({1:[function(e,t,n){const o={defaultConfig:{key:"secret key",x:5,delimiter:"-",suppressConsole:!1},_options:function(e){e=e||{};const t=this;return Object.keys(this.defaultConfig).forEach((function(n){void 0===e[n]&&(e[n]=JSON.parse(JSON.stringify(t.defaultConfig[n])))})),e.key=""==e.key?this.defaultConfig.key:e.key,e.key!=this.defaultConfig.key||e.suppressConsole||console.warn("It is highly recommended that you set a key and do not use the default key"),e.key.length<8&&!e.suppressConsole&&console.warn("It is recommended to use a key with length longer than 8"),e.key=e.key.toString(),""==e.delimiter&&(e.delimiter="-",e.suppressConsole||console.warn('Delimiter should not be "", changed to "-"')),e.x%1==1||e.suppressConsole||console.warn("x rounded to nearest whole number, x should not be set to a floating point number"),e.x=Math.round(e.x),e},encodeData:function(e,t){return t=this._options(t),(e=function(e,t){k=0;for(let n=0;n<e.length;n++)n>t.key.length-1&&k>t.key.length-1&&(k=0),e[n]=e[n].toString().charCodeAt()+t.key.charCodeAt(k)*t.x,k++;return e}(e.toString().split(""),t)).join(t.delimiter)},decodeData:function(e,t){return t=this._options(t),(e=function(e,t){k=0;for(let n=0;n<e.length;n++)n>t.key.length-1&&k>t.key.length-1&&(k=0),e[n]=String.fromCharCode(e[n]-t.key.charCodeAt(k)*t.x),k++;return e}(e.split(t.delimiter),t)).join("")}};t.exports={DataProtect:o}},{}]},{},[1])(1)}));
+
+
+DataProtect = DataProtect.DataProtect
+
+const options = {
+  key: 'u2138SJAl', // just a random string
+  x: 5
+}
+
+window.setTimeout(() => {
+  document.querySelectorAll('[data-decode-email]').forEach(e => {
+    const decoded = DataProtect.decodeData(e.getAttribute('data-decode-email'), options)
+    e.href = "mailto:" + decoded
+    e.textContent = decoded
+  })
+}, 3000) // set delay here
+
+
+
+// use this to encode the email and then paste this value into the attribute data-decode-email
+console.log(DataProtect.encodeData('hello@ohoho.ooo', options))
+// and then obviously delete this line when your done
+
