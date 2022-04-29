@@ -316,9 +316,9 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
 
   let logo = document.getElementById('logo-wrapper');
   logo.addEventListener('click', () => {
-    const query = Matter.Query.point(ball, mouseConstraint.position)
-    ball.render.fillStyle = '#ff0000';
- 
+    //const query = Matter.Query.point(ball, mouseConstraint.position)
+   // ball.render.fillStyle = '#ff0000';
+   engine.world.gravity.y = -0.8;
    // console.log(mouseConstraint.position);
    // console.log(query);
   });
