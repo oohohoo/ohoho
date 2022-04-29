@@ -315,6 +315,7 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
 
 
   let logo = document.getElementById('logo-wrapper');
+  /*
   logo.addEventListener('click', () => {
     //const query = Matter.Query.point(ball, mouseConstraint.position)
    // ball.render.fillStyle = '#ff0000';
@@ -322,6 +323,14 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
    // console.log(mouseConstraint.position);
    // console.log(query);
   });
+*/
+logo.addEventListener('click', function() {
+    if (engine.world.gravity.y == '-0.8') {
+        engine.world.gravity.y = null;
+    } else {
+        engine.world.gravity.y = '0.8';
+    }
+});
 
 
 
