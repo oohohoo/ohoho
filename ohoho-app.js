@@ -313,9 +313,9 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
   
 
 
-
-  let logo = document.getElementById('logo-wrapper');
 /*
+  let logo = document.getElementById('logo-wrapper');
+
   logo.addEventListener('click', () => {
     //const query = Matter.Query.point(ball, mouseConstraint.position)
    // ball.render.fillStyle = '#ff0000';
@@ -325,6 +325,20 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
   });
 */
 
+var clicked = false;
+
+function toggleBtnClick() {
+  var logo = document.getElementById('logo-wrapper');
+  if (clicked) {
+    engine.world.gravity.y = '-0.8';
+    clicked = false;
+  } else {
+    engine.world.gravity.y = '0.8';
+    clicked = true;
+  }
+}
+
+/*
 
 logo.addEventListener("click", function(ev){
 
@@ -336,7 +350,7 @@ logo.addEventListener("click", function(ev){
 
 });
 
-
+*/
 /*
 ================================================================================
 RESIZE CANVAS
