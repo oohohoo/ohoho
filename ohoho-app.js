@@ -338,6 +338,7 @@ function toggleBtnClick() {
   }
 }
 
+toggleBtnClick();
 /*
 
 logo.addEventListener("click", function(ev){
