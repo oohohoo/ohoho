@@ -328,9 +328,9 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
 
 logo.addEventListener('click', () => {
     if (engine.world.gravity.y == '-0.8') {
-        engine.world.gravity.y = '-0.8';
+      //  engine.world.gravity.y = '-0.8';
     } else {
-        engine.world.gravity.y = '0.8';
+        engine.world.gravity.y == '0.8';
     }
 });
 
