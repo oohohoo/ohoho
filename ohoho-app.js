@@ -242,58 +242,69 @@ MOUSE CONSTRAINT
     mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
 
 
-        Matter.Composite.add(world, mouseConstraint);
+    Matter.Composite.add(world, mouseConstraint);
 
-        render.mouse = mouse;
+    render.mouse = mouse;
 
-        // START THE ENGINE
+/* 
+=============================================  
+START THE ENGINE
+=============================================
+*/
 
-        Matter.Runner.run(engine);
-        Matter.Render.run(render);
+    Matter.Runner.run(engine);
+    Matter.Render.run(render);
 
 
-        /*
-        ================================================================================
-        MATTER.JS EVENTS
-        ================================================================================
-        */
+/* 
+=============================================  
+EVENTS
+=============================================
+*/
 
-        /* SHAKE SCENE AFTER 15 SECONDS */
+/* 
+=============================================  
+SHAKE SCENE EVERY X SECONDS
+=============================================
+*/
 
-        Matter.Events.on(engine, 'beforeUpdate', function (event) {
-            var engine = event.source;
+    Matter.Events.on(engine, 'beforeUpdate', function (event) {
+        var engine = event.source;
 
-            // apply random forces every 5 secs
-            if (event.timestamp % 15000 < 50)
-                shakeScene(engine);
-        });
-
+        // apply random forces every 5 secs
+        if (event.timestamp % 15000 < 50)
+            shakeScene(engine);
+    });
 
         var shakeScene = function (engine) {
-            var bodies = Matter.Composite.allBodies(engine.world);
+        var bodies = Matter.Composite.allBodies(engine.world);
 
             for (var i = 0; i < bodies.length; i++) {
-                var body = bodies[i];
-                // ovo ispod je bilo 500 pa nije radilo na smanjenim ekranima
-                if (!body.isStatic && body.position.y >= 100) {
-                    var forceMagnitude = 0.0035 * body.mass;
+        var body = bodies[i];
+            // ovo ispod je bilo 500 pa nije radilo na smanjenim ekranima
+            if (!body.isStatic && body.position.y >= 100) {
+        var forceMagnitude = 0.0035 * body.mass;
 
-                    Matter.Body.applyForce(body, body.position, {
-                        x: (forceMagnitude + Matter.Common.random() * forceMagnitude) * Matter.Common.choose([1, -1]),
-                        y: -forceMagnitude + Matter.Common.random() * -forceMagnitude
+            Matter.Body.applyForce(body, body.position, {
+                x: (forceMagnitude + Matter.Common.random() * forceMagnitude) * Matter.Common.choose([1, -1]),
+                y: -forceMagnitude + Matter.Common.random() * -forceMagnitude
                     });
                 }
             }
         };
 
 
-        /* SHAKE SCENU NA CLICK */
+/* 
+=============================================  
+SHAKE SCENE ON CLICK
+=============================================
+*/
 
-        Matter.Events.on(mouseConstraint, 'mousedown', function (event) {
-            var mousePosition = event.mouse.position;
-            console.log('mousedown at ' + mousePosition.x + ' ' + mousePosition.y);
-            shakeScene(engine);
-        });
+    Matter.Events.on(mouseConstraint, 'mousedown', function (event) {
+        var mousePosition = event.mouse.position;
+        console.log('mousedown at ' + mousePosition.x + ' ' + mousePosition.y);
+        shakeScene(engine);
+    });
 
 
 
@@ -314,42 +325,44 @@ MOUSE CONSTRAINT
 
 
 
-        /* CHANGE GRAVITY ON LOGO CLICK */
+/* 
+=============================================  
+CHANGE GRAVITY ON LOGO CLICK
+=============================================
+*/
 
-        let logo = document.getElementById('logo-wrapper');
+    let logo = document.getElementById('logo-wrapper');
         logo.addEventListener('click', () => {
             if (engine.world.gravity.y == "-1") {
                 engine.world.gravity.y = 1;
             } else {
                 engine.world.gravity.y = -1;
             }
-        });
+    });
 
 
 
+/* 
+=============================================  
+CANVAS RESIZE
+=============================================
+*/
 
+    // Get current 
+    let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
 
-        /*
-        ================================================================================
-        RESIZE CANVAS
-        ================================================================================
-        */
+    // Reset the canvas
+    ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transformation
+    ctx.clearRect(0, 0, ...viewSizes); // wipe
 
-        // Get current 
-        let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
+    // Determine scale factor
+    let worldSizes = [window.innerWidth, window.innerHeight];
+    let scales = worldSizes.map((worldSize, i) => viewSizes[i] / worldSize);
+    let minScale = Math.min(...scales);
 
-        // Reset the canvas
-        ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transformation
-        ctx.clearRect(0, 0, ...viewSizes); // wipe
-
-        // Determine scale factor
-        let worldSizes = [window.innerWidth, window.innerHeight];
-        let scales = worldSizes.map((worldSize, i) => viewSizes[i] / worldSize);
-        let minScale = Math.min(...scales);
-
-        // Determine shift in order to center the content
-        let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) / 2);
-        ctx.setTransform(minScale, 0, 0, minScale, ...shift);
+    // Determine shift in order to center the content
+    let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) / 2);
+    ctx.setTransform(minScale, 0, 0, minScale, ...shift);
 
     }
 
@@ -357,21 +370,20 @@ MOUSE CONSTRAINT
 
 });
 
-
 /*
 ================================================================================
 ROLLING TEXT ON HOVER
 ================================================================================
 */
 
-let elements = document.querySelectorAll('.rolling-text');
+    let elements = document.querySelectorAll('.rolling-text');
 
-elements.forEach(element => {
-    let innerText = element.innerText;
-    element.innerHTML = '';
+    elements.forEach(element => {
+        let innerText = element.innerText;
+        element.innerHTML = '';
 
     let textContainer = document.createElement('div');
-    textContainer.classList.add('block');
+        textContainer.classList.add('block');
 
     for (let letter of innerText) {
         let span = document.createElement('span');
