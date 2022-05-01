@@ -325,33 +325,20 @@ Matter.Events.on(mouseConstraint, 'mousedown', function(event) {
   });
 */
 
-var clicked = false;
 
-function toggleBtnClick() {
-  var logo = document.getElementById('logo-wrapper');
-  if (clicked) {
-    engine.world.gravity.y = '-0.8';
-    clicked = false;
-  } else {
-    engine.world.gravity.y = '0.8';
-    clicked = true;
-  }
-}
-
-toggleBtnClick();
-/*
-
-logo.addEventListener("click", function(ev){
-
-    if(engine.world.gravity.y == '-0.8'){
-        engine.world.gravity.y = '-0.8';
-    }else if(engine.world.gravity.y == '0.8'){
-        engine.world.gravity.y = '0.8';
-    }
-
+let logo = document.getElementById('logo-wrapper');
+    logo.addEventListener('click', () => {
+      if (engine.world.gravity.y == "-1") {
+             engine.world.gravity.y = 1;
+      } else {
+        engine.world.gravity.y = -1;
+      }
 });
 
-*/
+
+
+
+
 /*
 ================================================================================
 RESIZE CANVAS
