@@ -75,6 +75,128 @@ RESIZE O & H
         return Math.round(19.3 / 100 * window.innerWidth);
     }
 
+
+
+/* 
+=============================================  
+DESKTOP vs MOBILE MATCHMEDIA
+=============================================
+*/
+  
+var mq = window.matchMedia( "(max-width: 800px)" );
+if (mq.matches) {
+  
+  
+  
+/* 
+=============================================  
+O1 BODY 
+=============================================
+*/
+
+var ball = Matter.Bodies.circle(0, 0, percentX(), {
+  //  force: { x: 60, y: 0 },
+ // position: { x: 1, y: 0 },
+   density: 0.001,
+   friction: 0.01,
+    frictionAir: 0.00001,
+    restitution: 0.2,
+    render: {
+        fillStyle: '#8E8E8E',
+        strokeStyle: 'black',
+        lineWidth: 0
+    }
+});
+Matter.Composite.add(world, ball);
+
+/* 
+=============================================  
+H1 BODY
+=============================================
+*/
+
+var ball = Matter.Bodies.rectangle(2, 0, percentY(), percentY(), {
+ //  position: { x: 2, y: 0 },
+   density: 0.001,
+    friction: 0.01,
+    frictionAir: 0.00001,
+    restitution: 0.2,
+    render: {
+        fillStyle: '#8E8E8E',
+        strokeStyle: 'black',
+        lineWidth: 0
+    }
+});
+Matter.Composite.add(world, ball);
+
+/* 
+=============================================  
+O2 BODY
+=============================================
+*/
+
+var ball = Matter.Bodies.circle(3, 0, percentX(), {
+// position: { x: 3, y: 0 },
+   density: 0.001,
+    friction: 0.01,
+    frictionAir: 0.00001,
+    restitution: 0.2,
+    render: {
+        fillStyle: '#8E8E8E',
+        strokeStyle: 'black',
+        lineWidth: 0
+    }
+});
+Matter.Composite.add(world, ball);
+
+/* 
+=============================================  
+H2 BODY
+=============================================
+*/
+
+var ball = Matter.Bodies.rectangle(4, 0, percentY(), percentY(), {
+ //position: { x: 4, y: 0 },
+   density: 0.001,
+    friction: 0.01,
+    frictionAir: 0.00001,
+    restitution: 0.2,
+    render: {
+        fillStyle: '#8E8E8E',
+        strokeStyle: 'black',
+        lineWidth: 0
+    }
+});
+Matter.Composite.add(world, ball);
+
+/* 
+=============================================  
+O3 BODY
+=============================================
+*/
+
+var ball = Matter.Bodies.circle(5, 0, percentX(), {
+// position: { x: 5, y: 0 },
+   density: 0.001,
+    friction: 0.01,
+    frictionAir: 0.00001,
+    restitution: 0.2,
+    render: {
+        fillStyle: '#8E8E8E',
+        strokeStyle: 'black',
+        lineWidth: 0
+    }
+});
+Matter.Composite.add(world, ball);
+
+  
+  console.log("MOBILE!");
+  
+  
+  
+}
+else {
+
 /* 
 =============================================  
 O1 BODY 
@@ -168,7 +290,11 @@ O3 BODY
             }
         });
      Matter.Composite.add(world, ball);
-
+  
+   console.log("DESKTOP");
+  
+  
+}
 
 /* 
 =============================================  
