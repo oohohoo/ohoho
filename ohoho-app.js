@@ -333,10 +333,10 @@ CHANGE GRAVITY ON LOGO CLICK
 
     let logo = document.getElementById('logo-wrapper');
         logo.addEventListener('click', () => {
-            if (engine.world.gravity.y == "-1") {
-                engine.world.gravity.y = 1;
+            if (engine.world.gravity.y == "-0.4") {
+                engine.world.gravity.y = 0.4;
             } else {
-                engine.world.gravity.y = -1;
+                engine.world.gravity.y = -0.4;
             }
     });
 
