@@ -137,7 +137,7 @@ H2 BODY
 =============================================
 */
     var ball = Matter.Bodies.rectangle(600, 0.1, percentY(), percentY(), {
-        chamfer: { radius: 20 },
+        chamfer: { radius: 2 },
         density: 0.04,
         friction: 0.01,
         // frictionAir: 0.00001,
