@@ -257,13 +257,13 @@ MATTER.JS EVENTS
 ================================================================================
 */
 
-/* SHAKE SCENE AFTER 5 SECONDS */
+/* SHAKE SCENE AFTER 15 SECONDS */
 
 Matter.Events.on(engine, 'beforeUpdate', function(event) {
     var engine = event.source;
 
     // apply random forces every 5 secs
-    if (event.timestamp % 5000 < 50)
+    if (event.timestamp % 15000 < 50)
         shakeScene(engine);
 });
 
