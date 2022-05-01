@@ -377,6 +377,7 @@ if (typeof window !== 'undefined') {
     window.addEventListener('deviceorientation', updateGravity);
 }
 
+
 /* 
 =============================================  
 MOUSE CONSTRAINT
