@@ -348,35 +348,6 @@ GRAVITY
     engine.world.gravity.y = 0.4;
 
 
-/* 
-=============================================  
-DEVICE ORIENTATION
-=============================================
-*/
-
-if (typeof window !== 'undefined') {
-    var updateGravity = function(event) {
-        var orientation = typeof window.orientation !== 'undefined' ? window.orientation : 0,
-            gravity = engine.gravity;
-
-        if (orientation === 0) {
-            gravity.x = Matter.Common.clamp(event.gamma, -90, 90) / 90;
-            gravity.y = Matter.Common.clamp(event.beta, -90, 90) / 90;
-        } else if (orientation === 180) {
-            gravity.x = Matter.Common.clamp(event.gamma, -90, 90) / 90;
-            gravity.y = Matter.Common.clamp(-event.beta, -90, 90) / 90;
-        } else if (orientation === 90) {
-            gravity.x = Matter.Common.clamp(event.beta, -90, 90) / 90;
-            gravity.y = Matter.Common.clamp(-event.gamma, -90, 90) / 90;
-        } else if (orientation === -90) {
-            gravity.x = Matter.Common.clamp(-event.beta, -90, 90) / 90;
-            gravity.y = Matter.Common.clamp(event.gamma, -90, 90) / 90;
-        }
-    };
-
-    window.addEventListener('deviceorientation', updateGravity);
-}
-
 
 /* 
 =============================================  
@@ -467,21 +438,29 @@ SHAKE SCENE ON CLICK
 
 
 
-        /* MOUSE EVENT DRAG*/
+/* 
+=============================================  
+CHANGE COLOR ON DRAG
+=============================================
+*/
 
-        // an example of using mouse events on a mouse
-        Matter.Events.on(mouseConstraint, 'startdrag', function (event) {
-            // ball.render.fillStyle = '#b6fa00';
-            ball.render.fillStyle = '#6fb000';
-        });
-
-
-        // an example of using mouse events on a mouse
-        Matter.Events.on(mouseConstraint, 'enddrag', function (event) {
-            //   ball.render.fillStyle = '#8E8E8E';
-            ball.render.fillStyle = '#8E8E8E';
-        });
-
+// START DRAG
+Matter.Events.on(mouseConstraint, 'startdrag', function (event) {
+    const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
+  
+    bodies.forEach(b => {
+      b.render.fillStyle = '#b6fa00';
+    })
+});
+  
+// END DRAG
+Matter.Events.on(mouseConstraint, 'enddrag', function (event) {
+    const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
+  
+    bodies.forEach(b => {
+      b.render.fillStyle = '#8E8E8E';
+    })
+});
 
 
 /* 
