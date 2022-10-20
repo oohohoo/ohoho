@@ -122,7 +122,7 @@ var ball = Matter.Bodies.rectangle(2, 0, percentY(), percentY(), {
     frictionAir: 0.00001,
     restitution: 0.2,
     render: {
-        fillStyle: '#8E8E8E',
+        fillStyle: '#ff0000',
         strokeStyle: 'black',
         lineWidth: 0
     }
