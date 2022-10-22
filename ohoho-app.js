@@ -122,7 +122,7 @@ var ball = Matter.Bodies.rectangle(2, 0, percentY(), percentY(), {
     frictionAir: 0.00001,
     restitution: 0.2,
     render: {
-        fillStyle: '#ff0000',
+        fillStyle: '#8E8E8E',
         strokeStyle: 'black',
         lineWidth: 0
     }
@@ -204,7 +204,7 @@ O1 BODY
 */
 
     var o1 = Matter.Bodies.circle(50, 0, percentX(), {
-        /*  force: { x: 1, y: 0 }, */
+         force: { x: 1, y: 0 }, 
         density: 0.04,
         friction: 0.01,
         frictionAir: 0.00001,
