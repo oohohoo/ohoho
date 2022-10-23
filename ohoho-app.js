@@ -204,13 +204,13 @@ O1 BODY
 */
 
     var o1 = Matter.Bodies.circle(50, 0, percentX(), {
-         force: { x: 1, y: 0 }, 
+        /*  force: { x: 1, y: 0 },  */
         density: 0.1,
         friction: 0.01,
         frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: '#ff0000,
             strokeStyle: 'black',
             lineWidth: 0
             }
