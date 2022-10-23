@@ -121,11 +121,11 @@ Matter.Composite.add(world, o1);
 H1 BODY
 =============================================
 */
-/* var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
+ var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
-     density: 0.04,
-    friction: 0.01,
-    frictionAir: 0.00001,
+    density: 0.001,
+ /*    friction: 0.01,
+    frictionAir: 0.00001, */
     restitution: 0.8,
     render: {
         fillStyle: '#8E8E8E',
@@ -133,7 +133,7 @@ H1 BODY
         lineWidth: 0
         }
     });
-Matter.Composite.add(world, ball); */
+Matter.Composite.add(world, ball); 
 
 /* 
 =============================================  
