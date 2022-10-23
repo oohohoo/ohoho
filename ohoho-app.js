@@ -96,10 +96,10 @@ O1 BODY
 
 var o1 = Matter.Bodies.circle(50, 0, percentX(), {
     /*  force: { x: 1, y: 0 },  */
-    density: 0.1,
-    friction: 0.01,
+   /*  density: 0.1,
+    friction: 0.01, */
     /* frictionAir: 0.00001, */
-    restitution: 0.8,
+   /*  restitution: 0.8, */
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -115,10 +115,10 @@ H1 BODY
 */
 var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
-    density: 0.04,
+   /*  density: 0.04,
     friction: 0.01,
     frictionAir: 0.00001,
-    restitution: 0.8,
+    restitution: 0.8, */
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -133,10 +133,10 @@ O2 BODY
 =============================================
 */
 var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
-    density: 0.04,
+    /* density: 0.04,
     friction: 0.01,
     //frictionAir: 0.00001,
-    restitution: 0.8,
+    restitution: 0.8, */
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -152,10 +152,10 @@ H2 BODY
 */
 var ball = Matter.Bodies.rectangle(600, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
-    density: 0.04,
+  /*   density: 0.04,
     friction: 0.01,
     // frictionAir: 0.00001,
-    restitution: 0.8,
+    restitution: 0.8, */
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -170,10 +170,10 @@ O3 BODY
 =============================================
 */
 var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
-    density: 0.04,
+ /*    density: 0.04,
     friction: 0.01,
     // frictionAir: 0.00001,
-    restitution: 0.8,
+    restitution: 0.8, */
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
