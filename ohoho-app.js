@@ -231,7 +231,7 @@ O1 BODY
 H1 BODY
 =============================================
 */
-    var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
+    var ball = Matter.Bodies.rectangle(100, 0.1, percentY(), percentY(), {
         chamfer: { radius: 2 },
         density: 0.04,
         friction: 0.01,
@@ -250,7 +250,7 @@ H1 BODY
 O2 BODY
 =============================================
 */
-    var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
+    var ball = Matter.Bodies.circle(200, 0.1, percentX(), {
         density: 0.04,
         friction: 0.01,
         //frictionAir: 0.00001,
@@ -268,7 +268,7 @@ O2 BODY
 H2 BODY
 =============================================
 */
-    var ball = Matter.Bodies.rectangle(600, 0.1, percentY(), percentY(), {
+    var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
         chamfer: { radius: 2 },
         density: 0.04,
         friction: 0.01,
@@ -287,7 +287,7 @@ H2 BODY
 O3 BODY
 =============================================
 */
-    var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
+    var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
         density: 0.04,
         friction: 0.01,
         // frictionAir: 0.00001,
