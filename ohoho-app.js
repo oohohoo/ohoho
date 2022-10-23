@@ -140,7 +140,7 @@ Matter.Composite.add(world, ball);
 O2 BODY
 =============================================
 */
-var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
+var ball = Matter.Bodies.circle(350, 0.1, percentX(), {
     density: 0.04,
    // friction: 0.01,
     //frictionAir: 0.00001,
@@ -158,7 +158,7 @@ Matter.Composite.add(world, ball);
 H2 BODY
 =============================================
 */
-var ball = Matter.Bodies.rectangle(600, 0.1, percentY(), percentY(), {
+var ball = Matter.Bodies.rectangle(500, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
     density: 0.04,
     //friction: 0.01,
@@ -177,7 +177,7 @@ Matter.Composite.add(world, ball);
 O3 BODY
 =============================================
 */
- var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
+ var ball = Matter.Bodies.circle(600, 0.1, percentX(), {
     density: 0.04,
     //friction: 0.01,
     // frictionAir: 0.00001,
