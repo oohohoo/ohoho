@@ -207,7 +207,7 @@ O1 BODY
         /*  force: { x: 1, y: 0 },  */
         density: 0.1,
         friction: 0.01,
-        frictionAir: 0.00001,
+        /* frictionAir: 0.00001, */
         restitution: 0.8,
         render: {
             fillStyle: '#8E8E8E',
