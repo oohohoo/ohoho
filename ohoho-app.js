@@ -104,7 +104,7 @@ O1 BODY
 
 var o1 = Matter.Bodies.circle(50, 0.1, percentX(), {
     /*  force: { x: 1, y: 0 },  */
-     density: 0.001,
+    density: 0.04,
    /* friction: 0.01, */
     /* frictionAir: 0.00001, */
      restitution: 0.8, 
@@ -123,7 +123,7 @@ H1 BODY
 */
  var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
-    density: 0.001,
+    density: 0.04,
  /*    friction: 0.01,
     frictionAir: 0.00001, */
     restitution: 0.8,
@@ -141,7 +141,7 @@ O2 BODY
 =============================================
 */
 var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
-     density: 0.001,
+    density: 0.04,
    // friction: 0.01,
     //frictionAir: 0.00001,
     restitution: 0.8, 
