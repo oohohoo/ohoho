@@ -140,9 +140,9 @@ Matter.Composite.add(world, ball);
 O2 BODY
 =============================================
 */
-/* var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
-     density: 0.04,
-    friction: 0.01,
+var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
+     density: 0.001,
+   // friction: 0.01,
     //frictionAir: 0.00001,
     restitution: 0.8, 
     render: {
@@ -151,7 +151,7 @@ O2 BODY
         lineWidth: 0
         }
     });
-Matter.Composite.add(world, ball); */
+Matter.Composite.add(world, ball); 
 
 /* 
 =============================================  
