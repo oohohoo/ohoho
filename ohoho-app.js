@@ -102,7 +102,7 @@ O1 BODY
 =============================================
 */
 
-var o1 = Matter.Bodies.circle(50, 0, percentX(), {
+var o1 = Matter.Bodies.circle(50, 0.1, percentX(), {
     /*  force: { x: 1, y: 0 },  */
    /*  density: 0.1,
     friction: 0.01, */
