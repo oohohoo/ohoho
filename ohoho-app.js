@@ -36,7 +36,7 @@ ENGINE
 */
 
     var engine = Matter.Engine.create({
-            enableSleeping: true
+            enableSleeping: false
         }),
         world = engine.world;
 
