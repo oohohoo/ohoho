@@ -162,8 +162,8 @@ var ball = Matter.Bodies.rectangle(500, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
   /*   density: 0.02,
     //friction: 0.01,
-    // frictionAir: 0.00001,
-    restitution: 0.8,  */
+    // frictionAir: 0.00001,*/
+    restitution: 2,  
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
