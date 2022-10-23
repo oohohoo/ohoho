@@ -88,11 +88,11 @@ if (mq.matches) {
   
       // resize O
       function percentX(percent) {
-        return Math.round(9.8 / 100 * window.innerWidth);
+        return Math.round(3 / 100 * window.innerWidth);
     }
     // resize H
     function percentY(percent) {
-        return Math.round(19.3 / 100 * window.innerWidth);
+        return Math.round(15 / 100 * window.innerWidth);
     }
 
   
