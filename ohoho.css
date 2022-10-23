@@ -57,7 +57,7 @@ CANVAS
 canvas {
     margin: 0 auto;
     display: block;
-    z-index: 2;
+    mix-blend-mode: difference;
 }
 
 canvas:active {
