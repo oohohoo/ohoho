@@ -66,7 +66,7 @@ RESIZE O & H
 =============================================
 */
 
-    // resize O
+ /*    // resize O
     function percentX(percent) {
         return Math.round(9.8 / 100 * window.innerWidth);
     }
@@ -74,7 +74,7 @@ RESIZE O & H
     function percentY(percent) {
         return Math.round(19.3 / 100 * window.innerWidth);
     }
-
+ */
 
 
 /* 
@@ -86,7 +86,15 @@ DESKTOP vs MOBILE MATCHMEDIA
 var mq = window.matchMedia( "(max-width: 800px)" );
 if (mq.matches) {
   
-  
+      // resize O
+      function percentX(percent) {
+        return Math.round(9.8 / 100 * window.innerWidth);
+    }
+    // resize H
+    function percentY(percent) {
+        return Math.round(19.3 / 100 * window.innerWidth);
+    }
+
   
 /* 
 =============================================  
