@@ -287,7 +287,7 @@ H2 BODY
 O3 BODY
 =============================================
 */
-    var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
+    var ball = Matter.Bodies.circle(350, 0.1, percentX(), {
         density: 0.04,
         friction: 0.01,
         // frictionAir: 0.00001,
