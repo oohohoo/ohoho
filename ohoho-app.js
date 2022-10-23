@@ -354,7 +354,7 @@ GRAVITY
 =============================================
 */
 
-    engine.world.gravity.y = 0.4;
+    engine.world.gravity.y = 0.5;
 
 
 
