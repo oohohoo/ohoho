@@ -57,6 +57,7 @@ CANVAS
 canvas {
     margin: 0 auto;
     display: block;
+    z-index: 2;
 }
 
 canvas:active {
