@@ -92,7 +92,7 @@ if (mq.matches) {
     }
     // resize H
     function percentY(percent) {
-        return Math.round(15 / 100 * window.innerWidth);
+        return Math.round(3 / 100 * window.innerWidth);
     }
 
   
