@@ -214,7 +214,7 @@ O1 BODY
 
     var o1 = Matter.Bodies.circle(50, 0, percentX(), {
         /*  force: { x: 1, y: 0 },  */
-        density: 0.1,
+        density: 0.04,
         friction: 0.01,
         /* frictionAir: 0.00001, */
         restitution: 0.8,
