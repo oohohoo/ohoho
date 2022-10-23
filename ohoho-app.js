@@ -107,7 +107,7 @@ var o1 = Matter.Bodies.circle(50, 0.1, percentX(), {
     density: 0.04,
    /* friction: 0.01, */
     /* frictionAir: 0.00001, */
-     restitution: 0.8, 
+     restitution: 0.5, 
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -126,7 +126,7 @@ H1 BODY
     density: 0.04,
  /*    friction: 0.01,
     frictionAir: 0.00001, */
-    restitution: 0.8,
+    restitution: 0.5,
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -144,7 +144,7 @@ var ball = Matter.Bodies.circle(150, 0.1, percentX(), {
     density: 0.04,
    // friction: 0.01,
     //frictionAir: 0.00001,
-    restitution: 0.8, 
+    restitution: 0.5, 
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -163,7 +163,7 @@ var ball = Matter.Bodies.rectangle(200, 0.1, percentY(), percentY(), {
     density: 0.04,
     //friction: 0.01,
     // frictionAir: 0.00001,
-    restitution: 0.8, 
+    restitution: 0.5, 
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -181,7 +181,7 @@ O3 BODY
     density: 0.04,
    // friction: 0.01,
     // frictionAir: 0.00001,
-    restitution: 0.8,
+    restitution: 0.5,
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
