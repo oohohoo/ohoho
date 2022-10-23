@@ -107,7 +107,7 @@ var o1 = Matter.Bodies.circle(50, 0.1, percentX(), {
      density: 0.001,
    /* friction: 0.01, */
     /* frictionAir: 0.00001, */
-   /*  restitution: 0.8, */
+     restitution: 0.8, 
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
