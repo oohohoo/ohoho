@@ -191,7 +191,7 @@ var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
 
 console.log("DESKTOP");
 
-
+}
 }
 else {
 
