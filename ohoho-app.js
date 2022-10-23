@@ -121,63 +121,63 @@ Matter.Composite.add(world, o1);
 H1 BODY
 =============================================
 */
-var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
+/* var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
-   /*  density: 0.04,
+     density: 0.04,
     friction: 0.01,
     frictionAir: 0.00001,
-    restitution: 0.8, */
+    restitution: 0.8,
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
         lineWidth: 0
         }
     });
-Matter.Composite.add(world, ball);
+Matter.Composite.add(world, ball); */
 
 /* 
 =============================================  
 O2 BODY
 =============================================
 */
-var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
-    /* density: 0.04,
+/* var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
+     density: 0.04,
     friction: 0.01,
     //frictionAir: 0.00001,
-    restitution: 0.8, */
+    restitution: 0.8, 
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
         lineWidth: 0
         }
     });
-Matter.Composite.add(world, ball);
+Matter.Composite.add(world, ball); */
 
 /* 
 =============================================  
 H2 BODY
 =============================================
 */
-var ball = Matter.Bodies.rectangle(600, 0.1, percentY(), percentY(), {
+/* var ball = Matter.Bodies.rectangle(600, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
-  /*   density: 0.04,
+    density: 0.04,
     friction: 0.01,
     // frictionAir: 0.00001,
-    restitution: 0.8, */
+    restitution: 0.8, 
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
         lineWidth: 0
         }
     });
-Matter.Composite.add(world, ball);
+Matter.Composite.add(world, ball); */
 
 /* 
 =============================================  
 O3 BODY
 =============================================
 */
-var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
+/* var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
     density: 0.04,
     friction: 0.01,
     // frictionAir: 0.00001,
@@ -188,7 +188,7 @@ var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
         lineWidth: 0
         }
     });
- Matter.Composite.add(world, ball);
+ Matter.Composite.add(world, ball); */
 
 console.log("DESKTOP");
 
