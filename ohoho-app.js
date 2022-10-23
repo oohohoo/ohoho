@@ -158,9 +158,9 @@ Matter.Composite.add(world, ball);
 H2 BODY
 =============================================
 */
-var ball = Matter.Bodies.rectangle(450, 0.1, percentY(), percentY(), {
+var ball = Matter.Bodies.rectangle(500, 0.1, percentY(), percentY(), {
     chamfer: { radius: 2 },
-    density: 0.04,
+    density: 0.02,
     //friction: 0.01,
     // frictionAir: 0.00001,
     restitution: 0.8, 
