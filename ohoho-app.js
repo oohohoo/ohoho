@@ -66,7 +66,7 @@ RESIZE O & H
 =============================================
 */
 
- /*    // resize O
+    // resize O
     function percentX(percent) {
         return Math.round(9.8 / 100 * window.innerWidth);
     }
@@ -74,7 +74,7 @@ RESIZE O & H
     function percentY(percent) {
         return Math.round(19.3 / 100 * window.innerWidth);
     }
- */
+
 
 
 /* 
@@ -86,14 +86,7 @@ DESKTOP vs MOBILE MATCHMEDIA
 var mq = window.matchMedia( "(max-width: 800px)" );
 if (mq.matches) {
   
-// resize O
-function percentX(percent) {
-    return Math.round(9.8 / 100 * window.innerWidth);
-}
-// resize H
-function percentY(percent) {
-    return Math.round(19.3 / 100 * window.innerWidth);
-}
+  
   
 /* 
 =============================================  
@@ -103,8 +96,8 @@ O1 BODY
 
 var o1 = Matter.Bodies.circle(50, 0, percentX(), {
     /*  force: { x: 1, y: 0 },  */
-    density: 0.1,
-    friction: 0.01, 
+   /*  density: 0.1,
+    friction: 0.01, */
     /* frictionAir: 0.00001, */
    /*  restitution: 0.8, */
     render: {
@@ -177,10 +170,10 @@ O3 BODY
 =============================================
 */
 var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
- /*    density: 0.04,
+    density: 0.04,
     friction: 0.01,
     // frictionAir: 0.00001,
-    restitution: 0.8, */
+    restitution: 0.8,
     render: {
         fillStyle: '#8E8E8E',
         strokeStyle: 'black',
@@ -191,7 +184,7 @@ var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
 
 console.log("DESKTOP");
 
-}
+
 }
 else {
 
