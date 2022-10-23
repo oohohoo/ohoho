@@ -210,7 +210,7 @@ O1 BODY
         frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#ff0000,
+            fillStyle: '#8E8E8E',
             strokeStyle: 'black',
             lineWidth: 0
             }
