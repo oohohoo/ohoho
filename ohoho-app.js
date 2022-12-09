@@ -495,7 +495,7 @@ CANVAS RESIZE
 =============================================
 */
 
-    // Get current 
+   /*  // Get current 
     let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
 
     // Reset the canvas
@@ -513,7 +513,7 @@ CANVAS RESIZE
 
     }
 
-    draw();
+    draw(); */
 
 });
 
