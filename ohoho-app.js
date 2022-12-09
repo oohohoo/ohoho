@@ -491,9 +491,19 @@ CHANGE GRAVITY ON LOGO CLICK
 
 /* 
 =============================================  
-CANVAS RESIZE
+CANVAS RESIZE - AI OPTIMIZE
 =============================================
 */
+
+let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
+
+// Reset the canvas and set the scaling and shifting transform
+ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transformation
+ctx.clearRect(0, 0, ...viewSizes); // wipe
+let worldSizes = [window.innerWidth, window.innerHeight];
+let scales = worldSizes.map(size => viewSizes[i] / size);
+let minScale = Math.min(...scales);
+let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) / 2);
 
    /*  // Get current 
     let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
@@ -509,11 +519,11 @@ CANVAS RESIZE
 
     // Determine shift in order to center the content
     let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) / 2);
-    ctx.setTransform(minScale, 0, 0, minScale, ...shift);
+    ctx.setTransform(minScale, 0, 0, minScale, ...shift); */
 
     }
 
-    draw(); */
+    draw();
 
 });
 
