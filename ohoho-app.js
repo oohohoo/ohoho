@@ -238,7 +238,7 @@ H1 BODY
         frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: ''#' + Math.floor(Math.random() * 16777215).toString(16),
+            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
             strokeStyle: 'black',
             lineWidth: 0
             }
