@@ -491,11 +491,28 @@ CHANGE GRAVITY ON LOGO CLICK
 
 /* 
 =============================================  
-CANVAS RESIZE
+CANVAS RESIZE - AI OPTIMIZE
 =============================================
 */
 
-    // Get current 
+// Get current view sizes
+let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
+
+// Reset the canvas and set the scaling and shifting transform
+ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transformation
+ctx.clearRect(0, 0, ...viewSizes); // wipe
+let worldSizes = [window.innerWidth, window.innerHeight];
+let scales = worldSizes.map(size => viewSizes[i] / size);
+let minScale = Math.min(...scales);
+let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) / 2);
+ctx.setTransform(minScale, 0, 0, minScale, ...shift);
+
+// Draw
+draw();
+
+
+
+ /*    // Get current 
     let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
 
     // Reset the canvas
@@ -514,51 +531,23 @@ CANVAS RESIZE
     }
 
     draw();
+ */
+
+
+
+
+
 
 });
+
 
 /*
 ================================================================================
-ROLLING TEXT ON HOVER - AI REFACTOR OPTIMIZED
+ROLLING TEXT ON HOVER
 ================================================================================
 */
 
-
-let elements = document.querySelectorAll('.rolling-text');
-
-elements.forEach(element => {
-  // Create a document fragment to hold the new elements
-  let fragment = document.createDocumentFragment();
-
-  // Create the text container element
-  let textContainer = document.createElement('div');
-  textContainer.classList.add('block');
-
-  // Get the inner text of the element
-  let innerText = element.innerText;
-
-  // Split the inner text into individual letters
-  let letters = innerText.split('');
-
-  // Create a span element for each letter
-  letters.forEach(letter => {
-    let span = document.createElement('span');
-    span.innerText = letter.trim() === '' ? '\xa0' : letter;
-    span.classList.add('letter');
-    fragment.appendChild(span);
-  });
-
-  // Add the text container element and its clone to the fragment
-  fragment.appendChild(textContainer);
-  fragment.appendChild(textContainer.cloneNode(true));
-
-  // Clear the inner HTML of the original element and add the fragment
-  element.innerHTML = '';
-  element.appendChild(fragment);
-});
-
-
- /*    let elements = document.querySelectorAll('.rolling-text');
+    let elements = document.querySelectorAll('.rolling-text');
 
     elements.forEach(element => {
         let innerText = element.innerText;
@@ -577,4 +566,3 @@ elements.forEach(element => {
     element.appendChild(textContainer);
     element.appendChild(textContainer.cloneNode(true));
 });
- */
