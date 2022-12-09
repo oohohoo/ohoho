@@ -480,7 +480,7 @@ Matter.Events.on(mouseConstraint, 'startdrag', function (event) {
     const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
   
     bodies.forEach(b => {
-      b.render.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
+      b.render.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
     })
 });
   
@@ -489,7 +489,7 @@ Matter.Events.on(mouseConstraint, 'enddrag', function (event) {
     const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
   
     bodies.forEach(b => {
-      b.render.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
+      b.render.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
     })
 });
 
