@@ -515,6 +515,8 @@ CANVAS RESIZE
 
     draw(); */
 
+});
+
     // Get current view sizes
 let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
 
@@ -530,7 +532,7 @@ ctx.setTransform(minScale, 0, 0, minScale, ...shift);
 // Draw
 draw();
 
-});
+
 
 
 
