@@ -10,7 +10,7 @@ var colorScheme1 = getComputedStyle(document.documentElement).getPropertyValue('
 var colorScheme2 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-2');
 var colorScheme3 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-3');
 
-setInterval(function() {
+window.onload = function() {
     // Remove the current color scheme classes
     document.documentElement.classList.remove('color-scheme-1');
     document.documentElement.classList.remove('color-scheme-2');
