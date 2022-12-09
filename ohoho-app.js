@@ -11,7 +11,7 @@ var colorScheme2 = getComputedStyle(document.documentElement).getPropertyValue('
 var colorScheme3 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-3');
 
 
-window.onload = (event) => {
+
     
  
 setInterval(function() {
@@ -25,7 +25,7 @@ setInterval(function() {
     document.documentElement.classList.add('color-scheme-' + colorScheme);
   }, 1000); // 1000 milliseconds = 1 second
   console.log("page is fully loaded");
-};
+
 
 /* 
 =============================================  
