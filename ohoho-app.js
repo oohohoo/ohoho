@@ -19,7 +19,7 @@ window.onload = function() {
     // Choose a new color scheme at random and add the corresponding class
     var colorScheme = Math.floor(Math.random() * 3) + 1;
     document.documentElement.classList.add('color-scheme-' + colorScheme);
-  }); 
+  }; 
   
 
 /* 
