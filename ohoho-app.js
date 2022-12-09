@@ -12,7 +12,7 @@ var colorScheme3 = getComputedStyle(document.documentElement).getPropertyValue('
 
 
 window.onload = (event) => {
-    console.log("page is fully loaded");
+    
  
 setInterval(function() {
     // Remove the current color scheme classes
@@ -24,7 +24,7 @@ setInterval(function() {
     var colorScheme = Math.floor(Math.random() * 3) + 1;
     document.documentElement.classList.add('color-scheme-' + colorScheme);
   }, 1000); // 1000 milliseconds = 1 second
-  
+  console.log("page is fully loaded");
 };
 
 /* 
