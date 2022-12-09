@@ -219,7 +219,7 @@ O1 BODY
         /* frictionAir: 0.00001, */
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -238,7 +238,7 @@ H1 BODY
         frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: ''#' + Math.floor(Math.random() * 16777215).toString(16),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -256,7 +256,7 @@ O2 BODY
         //frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -275,7 +275,7 @@ H2 BODY
         // frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -293,7 +293,7 @@ O3 BODY
         // frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -491,21 +491,11 @@ CHANGE GRAVITY ON LOGO CLICK
 
 /* 
 =============================================  
-CANVAS RESIZE - AI OPTIMIZE
+CANVAS RESIZE
 =============================================
 */
 
-let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
-
-// Reset the canvas and set the scaling and shifting transform
-ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transformation
-ctx.clearRect(0, 0, ...viewSizes); // wipe
-let worldSizes = [window.innerWidth, window.innerHeight];
-let scales = worldSizes.map(size => viewSizes[i] / size);
-let minScale = Math.min(...scales);
-let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) / 2);
-
-   /*  // Get current 
+    // Get current 
     let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
 
     // Reset the canvas
@@ -519,7 +509,7 @@ let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) /
 
     // Determine shift in order to center the content
     let shift = scales.map((scale, i) => (viewSizes[i] - minScale * worldSizes[i]) / 2);
-    ctx.setTransform(minScale, 0, 0, minScale, ...shift); */
+    ctx.setTransform(minScale, 0, 0, minScale, ...shift);
 
     }
 
