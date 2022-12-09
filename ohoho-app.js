@@ -150,7 +150,7 @@ H1 BODY
     frictionAir: 0.00001, */
     restitution: 0.5,
     render: {
-        fillStyle: '#8E8E8E',
+        fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
         strokeStyle: 'black',
         lineWidth: 0
         }
@@ -168,7 +168,7 @@ var ball = Matter.Bodies.circle(150, 0.1, percentX(), {
     //frictionAir: 0.00001,
     restitution: 0.5, 
     render: {
-        fillStyle: '#8E8E8E',
+        fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
         strokeStyle: 'black',
         lineWidth: 0
         }
@@ -187,7 +187,7 @@ var ball = Matter.Bodies.rectangle(200, 0.1, percentY(), percentY(), {
     // frictionAir: 0.00001,
     restitution: 0.5, 
     render: {
-        fillStyle: '#8E8E8E',
+        fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
         strokeStyle: 'black',
         lineWidth: 0
         }
@@ -205,7 +205,7 @@ O3 BODY
     // frictionAir: 0.00001,
     restitution: 0.5,
     render: {
-        fillStyle: '#8E8E8E',
+        fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
         strokeStyle: 'black',
         lineWidth: 0
         }
@@ -241,7 +241,7 @@ O1 BODY
         /* frictionAir: 0.00001, */
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -260,7 +260,7 @@ H1 BODY
         frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -278,7 +278,7 @@ O2 BODY
         //frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -297,7 +297,7 @@ H2 BODY
         // frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -315,7 +315,7 @@ O3 BODY
         // frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -480,7 +480,7 @@ Matter.Events.on(mouseConstraint, 'startdrag', function (event) {
     const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
   
     bodies.forEach(b => {
-      b.render.fillStyle = '#b6fa00';
+      b.render.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
     })
 });
   
@@ -489,7 +489,7 @@ Matter.Events.on(mouseConstraint, 'enddrag', function (event) {
     const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
   
     bodies.forEach(b => {
-      b.render.fillStyle = '#8E8E8E';
+      b.render.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
     })
 });
 
