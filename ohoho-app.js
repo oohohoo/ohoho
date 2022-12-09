@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+/* window.addEventListener('load', function () { */
 
 /* 
 =============================================  
@@ -515,7 +515,7 @@ CANVAS RESIZE
 
     draw(); */
 
-});
+/* }); */
 
     // Get current view sizes
 let viewSizes = [canvas.width = window.innerWidth, canvas.height = window.innerHeight];
