@@ -523,7 +523,7 @@ ROLLING TEXT ON HOVER
 ================================================================================
 */
 
-    let elements = document.querySelectorAll('.rolling-text');
+ /*    let elements = document.querySelectorAll('.rolling-text');
 
     elements.forEach(element => {
         let innerText = element.innerText;
@@ -542,3 +542,4 @@ ROLLING TEXT ON HOVER
     element.appendChild(textContainer);
     element.appendChild(textContainer.cloneNode(true));
 });
+ */
