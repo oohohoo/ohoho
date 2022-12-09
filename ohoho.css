@@ -210,3 +210,28 @@ ROLLING TEXT
 .letter:nth-child(21) {
     transition-delay: 0.3s;
 }
+
+
+/*
+================================================================================
+CHANGE COLOR ON REFRESH
+================================================================================
+*/
+
+.color-scheme-1 {
+    --bg-color: #09ed0c;
+    --text-color: #00bdfb;
+    --link-color: #f78400;
+  }
+  
+  .color-scheme-2 {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --link-color: #0000ff;
+  }
+  
+  .color-scheme-3 {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #ff00cc;
+  }

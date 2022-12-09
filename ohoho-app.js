@@ -2,6 +2,28 @@ window.addEventListener('load', function () {
 
 /* 
 =============================================  
+CHANGE COLOR GROUPS
+=============================================
+*/
+
+var colorScheme1 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-1');
+var colorScheme2 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-2');
+var colorScheme3 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-3');
+
+setInterval(function() {
+    // Remove the current color scheme classes
+    document.documentElement.classList.remove('color-scheme-1');
+    document.documentElement.classList.remove('color-scheme-2');
+    document.documentElement.classList.remove('color-scheme-3');
+  
+    // Choose a new color scheme at random and add the corresponding class
+    var colorScheme = Math.floor(Math.random() * 3) + 1;
+    document.documentElement.classList.add('color-scheme-' + colorScheme);
+  }, 1000); // 1000 milliseconds = 1 second
+  
+
+/* 
+=============================================  
 FETCH CANVAS
 =============================================
 */
@@ -53,7 +75,7 @@ RENDER
             width: window.innerWidth,
             height: window.innerHeight,
             pixeRatio: 1,
-            background: '#1E1E1C',
+            background: getComputedStyle(document.documentElement).getPropertyValue('--bg-color'),
             wireframes: false,
             showAngleIndicator: false,
             //  showDebug: true,
@@ -109,7 +131,7 @@ var o1 = Matter.Bodies.circle(50, 0.1, percentX(), {
     /* frictionAir: 0.00001, */
      restitution: 0.5, 
     render: {
-        fillStyle: '#8E8E8E',
+        fillStyle: getComputedStyle(document.documentElement).getPropertyValue('--text-color'),
         strokeStyle: 'black',
         lineWidth: 0
         }
@@ -219,7 +241,7 @@ O1 BODY
         /* frictionAir: 0.00001, */
         restitution: 0.8,
         render: {
-            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            fillStyle: '#8E8E8E',
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -238,7 +260,7 @@ H1 BODY
         frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            fillStyle: '#8E8E8E',
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -256,7 +278,7 @@ O2 BODY
         //frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            fillStyle: '#8E8E8E',
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -275,7 +297,7 @@ H2 BODY
         // frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            fillStyle: '#8E8E8E',
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -293,7 +315,7 @@ O3 BODY
         // frictionAir: 0.00001,
         restitution: 0.8,
         render: {
-            fillStyle: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            fillStyle: '#8E8E8E',
             strokeStyle: 'black',
             lineWidth: 0
             }
