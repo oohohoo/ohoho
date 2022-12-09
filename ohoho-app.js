@@ -519,9 +519,44 @@ CANVAS RESIZE
 
 /*
 ================================================================================
-ROLLING TEXT ON HOVER
+ROLLING TEXT ON HOVER - AI REFACTOR OPTIMIZED
 ================================================================================
 */
+
+
+let elements = document.querySelectorAll('.rolling-text');
+
+elements.forEach(element => {
+  // Create a document fragment to hold the new elements
+  let fragment = document.createDocumentFragment();
+
+  // Create the text container element
+  let textContainer = document.createElement('div');
+  textContainer.classList.add('block');
+
+  // Get the inner text of the element
+  let innerText = element.innerText;
+
+  // Split the inner text into individual letters
+  let letters = innerText.split('');
+
+  // Create a span element for each letter
+  letters.forEach(letter => {
+    let span = document.createElement('span');
+    span.innerText = letter.trim() === '' ? '\xa0' : letter;
+    span.classList.add('letter');
+    fragment.appendChild(span);
+  });
+
+  // Add the text container element and its clone to the fragment
+  fragment.appendChild(textContainer);
+  fragment.appendChild(textContainer.cloneNode(true));
+
+  // Clear the inner HTML of the original element and add the fragment
+  element.innerHTML = '';
+  element.appendChild(fragment);
+});
+
 
  /*    let elements = document.querySelectorAll('.rolling-text');
 
