@@ -7,6 +7,7 @@ window.addEventListener('load', function () {
     */
 
   /*   window.onload = function() { */
+  document.addEventListener('DOMContentLoaded', function() {
         // Generate a random number between 1 and 3
         var colorScheme = Math.floor(Math.random() * 3) + 1;
       
@@ -22,25 +23,8 @@ window.addEventListener('load', function () {
         var linkColor = getComputedStyle(document.documentElement).getPropertyValue('--link-color');
     /*   } */
 
-
-  /*   
-    var colorScheme1 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-1');
-    var colorScheme2 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-2');
-    var colorScheme3 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-3');
-     
-   // document.addEventListener('DOMContentLoaded', function() {
-        // Remove the current color scheme classes
-        document.documentElement.classList.remove('color-scheme-1');
-        document.documentElement.classList.remove('color-scheme-2');
-        document.documentElement.classList.remove('color-scheme-3');
-      
-        // Choose a new color scheme at random and add the corresponding class
-        var colorScheme = Math.floor(Math.random() * 3) + 1;
-        document.documentElement.classList.add('color-scheme-' + colorScheme);
-   // });
-     */
-    
-
+});
+ 
     
     /* 
     =============================================  
