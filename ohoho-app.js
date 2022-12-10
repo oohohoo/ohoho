@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     =============================================
     */
 
-    window.onload = function() {
+  /*   window.onload = function() { */
         // Generate a random number between 1 and 3
         var colorScheme = Math.floor(Math.random() * 3) + 1;
       
@@ -20,7 +20,7 @@ window.addEventListener('load', function () {
         var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-color');
         var textColor = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
         var linkColor = getComputedStyle(document.documentElement).getPropertyValue('--link-color');
-      }
+    /*   } */
 
 
   /*   
