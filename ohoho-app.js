@@ -2,6 +2,48 @@ window.addEventListener('load', function () {
 
     /* 
     =============================================  
+    CHANGE COLOR GROUPS
+    =============================================
+    */
+
+    window.onload = function() {
+        // Generate a random number between 1 and 3
+        var colorScheme = Math.floor(Math.random() * 3) + 1;
+      
+        // Remove the existing color scheme classes
+        document.documentElement.classList.remove('color-scheme-1', 'color-scheme-2', 'color-scheme-3');
+      
+        // Add the new color scheme class
+        document.documentElement.classList.add('color-scheme-' + colorScheme);
+      
+        // Get the values of the custom properties
+        var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-color');
+        var textColor = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
+        var linkColor = getComputedStyle(document.documentElement).getPropertyValue('--link-color');
+      }
+
+
+  /*   
+    var colorScheme1 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-1');
+    var colorScheme2 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-2');
+    var colorScheme3 = getComputedStyle(document.documentElement).getPropertyValue('--color-scheme-3');
+     
+   // document.addEventListener('DOMContentLoaded', function() {
+        // Remove the current color scheme classes
+        document.documentElement.classList.remove('color-scheme-1');
+        document.documentElement.classList.remove('color-scheme-2');
+        document.documentElement.classList.remove('color-scheme-3');
+      
+        // Choose a new color scheme at random and add the corresponding class
+        var colorScheme = Math.floor(Math.random() * 3) + 1;
+        document.documentElement.classList.add('color-scheme-' + colorScheme);
+   // });
+     */
+    
+
+    
+    /* 
+    =============================================  
     FETCH CANVAS
     =============================================
     */
@@ -53,7 +95,7 @@ window.addEventListener('load', function () {
                 width: window.innerWidth,
                 height: window.innerHeight,
                 pixeRatio: 1,
-                background: '#1E1E1C',
+                background: bgColor,
                 wireframes: false,
                 showAngleIndicator: false,
                 //  showDebug: true,
@@ -109,7 +151,7 @@ window.addEventListener('load', function () {
         /* frictionAir: 0.00001, */
          restitution: 0.5, 
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: textColor,
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -128,7 +170,7 @@ window.addEventListener('load', function () {
         frictionAir: 0.00001, */
         restitution: 0.5,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: textColor,
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -146,7 +188,7 @@ window.addEventListener('load', function () {
         //frictionAir: 0.00001,
         restitution: 0.5, 
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: textColor,
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -165,7 +207,7 @@ window.addEventListener('load', function () {
         // frictionAir: 0.00001,
         restitution: 0.5, 
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: textColor,
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -183,7 +225,7 @@ window.addEventListener('load', function () {
         // frictionAir: 0.00001,
         restitution: 0.5,
         render: {
-            fillStyle: '#8E8E8E',
+            fillStyle: textColor,
             strokeStyle: 'black',
             lineWidth: 0
             }
@@ -219,7 +261,7 @@ window.addEventListener('load', function () {
             /* frictionAir: 0.00001, */
             restitution: 0.8,
             render: {
-                fillStyle: '#8E8E8E',
+                fillStyle: textColor,
                 strokeStyle: 'black',
                 lineWidth: 0
                 }
@@ -238,7 +280,7 @@ window.addEventListener('load', function () {
             frictionAir: 0.00001,
             restitution: 0.8,
             render: {
-                fillStyle: '#8E8E8E',
+                fillStyle: textColor,
                 strokeStyle: 'black',
                 lineWidth: 0
                 }
@@ -256,7 +298,7 @@ window.addEventListener('load', function () {
             //frictionAir: 0.00001,
             restitution: 0.8,
             render: {
-                fillStyle: '#8E8E8E',
+                fillStyle: textColor,
                 strokeStyle: 'black',
                 lineWidth: 0
                 }
@@ -275,7 +317,7 @@ window.addEventListener('load', function () {
             // frictionAir: 0.00001,
             restitution: 0.8,
             render: {
-                fillStyle: '#8E8E8E',
+                fillStyle: textColor,
                 strokeStyle: 'black',
                 lineWidth: 0
                 }
@@ -293,7 +335,7 @@ window.addEventListener('load', function () {
             // frictionAir: 0.00001,
             restitution: 0.8,
             render: {
-                fillStyle: '#8E8E8E',
+                fillStyle: textColor,
                 strokeStyle: 'black',
                 lineWidth: 0
                 }
@@ -411,7 +453,7 @@ window.addEventListener('load', function () {
             var engine = event.source;
     
             // apply random forces every 5 secs
-            if (event.timestamp % 15000 < 50)
+            if (event.timestamp % 5000 < 50)
                 shakeScene(engine);
         });
     
@@ -458,7 +500,7 @@ window.addEventListener('load', function () {
         const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
       
         bodies.forEach(b => {
-          b.render.fillStyle = '#b6fa00';
+          b.render.fillStyle = textColor;
         })
     });
       
@@ -467,7 +509,7 @@ window.addEventListener('load', function () {
         const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
       
         bodies.forEach(b => {
-          b.render.fillStyle = '#8E8E8E';
+          b.render.fillStyle = textColor;
         })
     });
     
