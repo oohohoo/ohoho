@@ -484,7 +484,7 @@ window.addEventListener('load', function () {
         const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
       
         bodies.forEach(b => {
-          b.render.fillStyle = textColor;
+          b.render.fillStyle = linkColor;
         })
     });
       
