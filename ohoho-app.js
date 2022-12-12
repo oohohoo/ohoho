@@ -12,13 +12,13 @@ window.addEventListener('load', function () {
         
         /* const element = document.getElementById("logo-wrapper"); */
 
-        const elements = document.getElementsByClassName("header-txt-wrapper");
+        const element = document.getElementsByClassName("header-txt-wrapper");
 
         // Generate a random number between 1 and 3
         var colorScheme = Math.floor(Math.random() * 2) + 1;
 
        
-        elements.classList.add("color-scheme-" + colorScheme);
+        element.classList.add("color-scheme-" + colorScheme);
        
 
         // Remove the existing color scheme classes
