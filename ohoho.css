@@ -219,20 +219,20 @@ CHANGE COLOR ON REFRESH
 */
 
 .color-scheme-1 {
-    --bg-color: #006400;
-    --text-color:  #FFD1DC;
-    --link-color: #ADD8E6;
+    --bg-color: #8E8E8E;
+    --text-color:  #1E1E1C;
+    --link-color: #b6fa00;
 }
 
 .color-scheme-2 {
-    --bg-color: #E6E6FA;
-    --text-color: #006400;
-    --link-color: #0000ff;
+    --bg-color: #b6fa00;
+    --text-color: #8E8E8E;
+    --link-color: #1E1E1C;
 }
 
 .color-scheme-3 {
-    --bg-color: #006400;
-    --text-color:  #FFE5B4;
-    --link-color: #ff00cc;
+    --bg-color: #1E1E1C;
+    --text-color:  #b6fa00;
+    --link-color: #8E8E8E;
 }
 
