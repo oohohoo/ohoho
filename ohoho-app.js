@@ -10,16 +10,16 @@ window.addEventListener('load', function () {
  /*  document.addEventListener('DOMContentLoaded', function() { */
         // Generate a random number between 1 and 3
         
-        const element = document.getElementById("logo-wrapper");
+        /* const element = document.getElementById("logo-wrapper"); */
 
-        const elements = document.getElementsByClassName("header-txt-wrapper");
+        const elements = document.getElementsByClassName("colorchange");
 
         // Generate a random number between 1 and 3
         var colorScheme = Math.floor(Math.random() * 2) + 1;
 
        
         element.classList.add("color-scheme-" + colorScheme);
-        elements.classList.add("color-scheme-" + colorScheme);
+       
 
         // Remove the existing color scheme classes
         document.documentElement.classList.remove('color-scheme-1', 'color-scheme-2');
