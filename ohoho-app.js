@@ -10,9 +10,9 @@ window.addEventListener('load', function () {
  /*  document.addEventListener('DOMContentLoaded', function() { */
         // Generate a random number between 1 and 3
         
-        /* const element = document.getElementById("logo-wrapper"); */
+        const element = document.getElementById("logo-wrapper"); 
 
-        const element = document.getElementsByClassName("header-txt-wrapper");
+     /*    const element = document.getElementsByClassName("header-txt-wrapper"); */
 
         // Generate a random number between 1 and 3
         var colorScheme = Math.floor(Math.random() * 2) + 1;
