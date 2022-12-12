@@ -9,8 +9,14 @@ window.addEventListener('load', function () {
   /*   window.onload = function() { */
  /*  document.addEventListener('DOMContentLoaded', function() { */
         // Generate a random number between 1 and 3
+        
+        const element = document.getElementById("logo-wrapper");
+
         var colorScheme = Math.floor(Math.random() * 3) + 1;
-      
+
+       
+        element.classList.add("color-scheme-" + colorScheme);
+        
         // Remove the existing color scheme classes
         document.documentElement.classList.remove('color-scheme-1', 'color-scheme-2', 'color-scheme-3');
       

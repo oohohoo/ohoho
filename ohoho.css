@@ -230,9 +230,14 @@ CHANGE COLOR ON REFRESH
     --link-color: #b6fa00;
 }
 
-.color-scheme-3 {
+/* .color-scheme-3 {
     --bg-color: #1E1E1C;
     --text-color:  #b6fa00;
     --link-color: #8E8E8E;
 }
+ */
 
+
+#logo-wrapper {
+    color: var(--text-color);
+  }
