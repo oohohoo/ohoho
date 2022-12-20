@@ -250,10 +250,10 @@ window.addEventListener('load', function () {
     
         var o1 = Matter.Bodies.circle(0.1, 100, percentX(), {
             /*  force: { x: 1, y: 0 },  */
-            density: 0.1,
+           /*  density: 0.1,
             friction: 0.01,
             /* frictionAir: 0.00001, */
-            restitution: 0.8,
+            restitution: 0.8, */
             render: {
                 fillStyle: textColor,
                 strokeStyle: 'black',
@@ -269,10 +269,10 @@ window.addEventListener('load', function () {
     */
         var ball = Matter.Bodies.rectangle(0.1, 300, percentY(), percentY(), {
             chamfer: { radius: 2 },
-            density: 0.04,
+           /*  density: 0.04,
             friction: 0.01,
             frictionAir: 0.00001,
-            restitution: 0.8,
+            restitution: 0.8, */
             render: {
                 fillStyle: textColor,
                 strokeStyle: 'black',
@@ -287,10 +287,10 @@ window.addEventListener('load', function () {
     =============================================
     */
         var ball = Matter.Bodies.circle(0.1, 400, percentX(), {
-            density: 0.04,
+            /* density: 0.04,
             friction: 0.01,
             //frictionAir: 0.00001,
-            restitution: 0.8,
+            restitution: 0.8, */
             render: {
                 fillStyle: textColor,
                 strokeStyle: 'black',
@@ -306,10 +306,10 @@ window.addEventListener('load', function () {
     */
         var ball = Matter.Bodies.rectangle(0.1, 600, percentY(), percentY(), {
             chamfer: { radius: 2 },
-            density: 0.04,
+          /*   density: 0.04,
             friction: 0.01,
             // frictionAir: 0.00001,
-            restitution: 0.8,
+            restitution: 0.8, */
             render: {
                 fillStyle: textColor,
                 strokeStyle: 'black',
@@ -324,10 +324,10 @@ window.addEventListener('load', function () {
     =============================================
     */
         var ball = Matter.Bodies.circle(0.1, 800, percentX(), {
-            density: 0.04,
+           /*  density: 0.04,
             friction: 0.01,
             // frictionAir: 0.00001,
-            restitution: 0.8,
+            restitution: 0.8, */
             render: {
                 fillStyle: textColor,
                 strokeStyle: 'black',
