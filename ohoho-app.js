@@ -489,23 +489,41 @@ window.addEventListener('load', function () {
     =============================================
     */
     
-    // START DRAG
-    Matter.Events.on(mouseConstraint, 'startdrag', function (event) {
-        const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
-      
-        bodies.forEach(b => {
-          b.render.fillStyle = linkColor;
-        })
-    });
-      
-    // END DRAG
-    Matter.Events.on(mouseConstraint, 'enddrag', function (event) {
-        const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
-      
-        bodies.forEach(b => {
-          b.render.fillStyle = textColor;
-        })
-    });
+   // dodaj event listener za startdrag događaj na mouseConstraint objektu
+Matter.Events.on(mouseConstraint, 'startdrag', function (event) {
+    // provjeri da li se miš nalazi iznad nekog objekta
+    const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
+  
+    if (bodies.length > 0) {
+      // ako se miš nalazi iznad nekog objekta, promijeni kursor na pokazivač (pointer)
+      canvas.style.cursor = 'pointer';
+      // mijenjaj boju objekta u linkColor
+      bodies.forEach(b => {
+        b.render.fillStyle = linkColor;
+      });
+    } else {
+      // u suprotnom, vrati kursor na zadani (default)
+      canvas.style.cursor = 'default';
+    }
+  });
+  
+  // dodaj event listener za enddrag događaj na mouseConstraint objektu
+  Matter.Events.on(mouseConstraint, 'enddrag', function (event) {
+    // provjeri da li se miš nalazi iznad nekog objekta
+    const bodies = Matter.Query.point(Matter.Composite.allBodies(world), event.mouse.position);
+  
+    if (bodies.length > 0) {
+      // ako se miš nalazi iznad nekog objekta, promijeni kursor na pokazivač (pointer)
+      canvas.style.cursor = 'pointer';
+      // mijenjaj boju objekta u textColor
+      bodies.forEach(b => {
+        b.render.fillStyle = textColor;
+      });
+    } else {
+      // u suprotnom, vrati kursor na zadani (default)
+      canvas.style.cursor = 'default';
+    }
+  });
     
 /* 
 =============================================  
@@ -513,7 +531,7 @@ PROMIJENI CURSOR ON HOVER
 =============================================
 */
 
-// dodaj event listener za mousemove događaj na canvas element
+/* // dodaj event listener za mousemove događaj na canvas element
 canvas.addEventListener('mousemove', function(event) {
     // dohvati poziciju miša na canvasu
     var mousePosition = {
@@ -532,7 +550,7 @@ canvas.addEventListener('mousemove', function(event) {
       canvas.style.cursor = 'default';
     }
   });
-
+ */
   
 
     /* 
