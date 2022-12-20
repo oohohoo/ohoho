@@ -238,6 +238,6 @@ CHANGE COLOR ON REFRESH
  */
 
 
-#logo-wrapper, .header-txt {
+#logo-wrapper, .header-txt, .colorchange {
     color: var(--text-color);
   }
