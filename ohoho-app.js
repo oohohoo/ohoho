@@ -248,7 +248,7 @@ window.addEventListener('load', function () {
     =============================================
     */
     
-        var o1 = Matter.Bodies.circle(100, 0.1, percentX(), {
+        var o1 = Matter.Bodies.circle(0.1, 100, percentX(), {
             /*  force: { x: 1, y: 0 },  */
             density: 0.1,
             friction: 0.01,
@@ -267,7 +267,7 @@ window.addEventListener('load', function () {
     H1 BODY
     =============================================
     */
-        var ball = Matter.Bodies.rectangle(300, 0.1, percentY(), percentY(), {
+        var ball = Matter.Bodies.rectangle(0.1, 300, percentY(), percentY(), {
             chamfer: { radius: 2 },
             density: 0.04,
             friction: 0.01,
@@ -286,7 +286,7 @@ window.addEventListener('load', function () {
     O2 BODY
     =============================================
     */
-        var ball = Matter.Bodies.circle(400, 0.1, percentX(), {
+        var ball = Matter.Bodies.circle(0.1, 400, percentX(), {
             density: 0.04,
             friction: 0.01,
             //frictionAir: 0.00001,
@@ -304,7 +304,7 @@ window.addEventListener('load', function () {
     H2 BODY
     =============================================
     */
-        var ball = Matter.Bodies.rectangle(600, 0.1, percentY(), percentY(), {
+        var ball = Matter.Bodies.rectangle(0.1, 600, percentY(), percentY(), {
             chamfer: { radius: 2 },
             density: 0.04,
             friction: 0.01,
@@ -323,7 +323,7 @@ window.addEventListener('load', function () {
     O3 BODY
     =============================================
     */
-        var ball = Matter.Bodies.circle(800, 0.1, percentX(), {
+        var ball = Matter.Bodies.circle(0.1, 800, percentX(), {
             density: 0.04,
             friction: 0.01,
             // frictionAir: 0.00001,
