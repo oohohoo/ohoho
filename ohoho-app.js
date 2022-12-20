@@ -507,6 +507,12 @@ window.addEventListener('load', function () {
         })
     });
 
+    /* 
+    =============================================  
+    CHANGE COLOR ON DRAG
+    =============================================
+    */
+
     // dodaj event listener za mousemove događaj na canvas element
 canvas.addEventListener('mousemove', function(event) {
     // dohvati poziciju miša na canvasu
