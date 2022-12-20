@@ -507,7 +507,34 @@ window.addEventListener('load', function () {
         })
     });
     
-    
+/* 
+=============================================  
+PROMIJENI CURSOR ON HOVER
+=============================================
+*/
+
+// dodaj event listener za mousemove događaj na canvas element
+canvas.addEventListener('mousemove', function(event) {
+    // dohvati poziciju miša na canvasu
+    var mousePosition = {
+      x: event.clientX,
+      y: event.clientY
+    };
+  
+    // koristi Matter.Query.point da provjeri da li se miš nalazi iznad objekta o1
+    var isOverObject = Matter.Query.point(o1, mousePosition);
+  
+    if (isOverObject) {
+      // ako je miš iznad objekta o1, promijeni kursor na pokazivač (pointer)
+      canvas.style.cursor = 'pointer';
+    } else {
+      // u suprotnom, vrati kursor na zadani (default)
+      canvas.style.cursor = 'default';
+    }
+  });
+
+  
+
     /* 
     =============================================  
     CHANGE GRAVITY ON LOGO CLICK
