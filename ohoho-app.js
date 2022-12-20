@@ -520,7 +520,7 @@ canvas.addEventListener('mousemove', function(event) {
   
     if (bodies.length > 0) {
       // ako se miš nalazi iznad nekog objekta, promijeni kursor na pokazivač (pointer)
-      canvas.style.cursor = 'pointer';
+      canvas.style.cursor = 'grab';
     } else {
       // u suprotnom, vrati kursor na zadani (default)
       canvas.style.cursor = 'default';
